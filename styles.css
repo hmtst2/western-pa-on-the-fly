@@ -2,7 +2,6 @@
 
 body {
     background-color: #f6f2e8;
-    color: #4f5b5c;
     font-family: Arial, sans-serif;
 }
 
@@ -11,6 +10,6 @@ h1 {
     text-align: center;
 }
 
-h2 {
-    color: #6b513b;
+p {
+    color: #4f5b5c;
 }
