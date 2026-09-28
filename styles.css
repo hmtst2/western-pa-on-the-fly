@@ -4,24 +4,21 @@ body {
     background-color: #f6f2e8;
     color: #4f5b5c;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
+
+/* ---------- HEADINGS AND TEXT ---------- */
+
+/* Styles and centers the main headings throughout the website. */
 h1 {
     color: #1f3d2b;
     text-align: center;
 }
 
+/* Sets the default paragraph text color. */
 p {
     color: #4f5b5c;
-}
-
-/* The home-page class is used by the body tag on index.html
-   to display the Downy Run background only on the homepage. */
-.home-page {
-    background-image: url("downy-run-background.png");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 70% auto;
 }
 
 /* The section-heading class is used by h2 tags to give
@@ -31,13 +28,152 @@ p {
 }
 
 /* The site-title ID is used by the main h1 tag on index.html.
-   It also adds the required text effect to the site title. */
+   It also applies the text-transform effect learned in Week 5. */
 #site-title {
     text-transform: uppercase;
 }
 
-/* The about-photo ID is used by the img tag on about.html
-   to control the size of the fly fishing photograph. */
+
+/* ---------- HEADER ---------- */
+
+/* Creates a solid off-white header so the Downy Run background
+   does not appear behind the website title. */
+.site-header {
+    background-color: #f6f2e8;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Removes extra margin around the homepage title so the
+   header spacing is controlled by its padding. */
+.site-header h1 {
+    margin: 0;
+}
+
+
+/* ---------- NAVIGATION BAR ---------- */
+
+/* Creates a consistent forest-green navigation bar. */
+nav {
+    background-color: #1f3d2b;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Displays navigation links horizontally and adds spacing. */
+nav a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #f6f2e8;
+}
+
+/* Changes the navigation background when the mouse
+   hovers over a link. */
+nav a:hover {
+    background-color: #6b513b;
+}
+
+
+/* ---------- MAIN PAGE LAYOUT ---------- */
+
+/* Centers the main content and limits it to 80% of the page width. */
+main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/* ---------- HOMEPAGE BACKGROUND ---------- */
+
+/* The home-page class is used by the main tag on index.html.
+   This keeps the Downy Run image behind the homepage content
+   without allowing it to appear behind the title or navigation. */
+.home-page {
+    background-image: url("downy-run-background.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+
+/* ---------- RESPONSIVE IMAGE ---------- */
+
+/* The about-photo ID is used by the img tag on about.html.
+   Percentage sizing allows the image to respond to page width. */
 #about-photo {
-    width: 500px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+/* Centers the semantic footer and gives it the site's
+   off-white background color. */
+footer {
+    background-color: #f6f2e8;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* ---------- TABLET RESPONSIVENESS ---------- */
+
+/* Adjusts the layout for tablets and screens
+   900px wide or smaller. */
+@media screen and (max-width: 900px) {
+
+    /* Gives the main content more room on smaller screens. */
+    main {
+        width: 90%;
+    }
+
+    /* Makes the About Me photograph larger relative
+       to the available screen width. */
+    #about-photo {
+        width: 70%;
+    }
+
+    /* Adjusts the homepage background for smaller screens. */
+    .home-page {
+        background-size: auto 100%;
+    }
+}
+
+
+/* ---------- PHONE RESPONSIVENESS ---------- */
+
+/* Adjusts the layout for phones and screens
+   600px wide or smaller. */
+@media screen and (max-width: 600px) {
+
+    /* Uses almost the full screen while preserving
+       a small amount of space along each side. */
+    main {
+        width: 95%;
+    }
+
+    /* Makes the About Me photograph fit comfortably
+       on a phone screen. */
+    #about-photo {
+        width: 90%;
+    }
+
+    /* Stacks navigation links vertically on phones. */
+    nav a {
+        display: block;
+    }
+
+    /* Reduces the title size so it fits smaller screens. */
+    #site-title {
+        font-size: 1.6em;
+    }
 }

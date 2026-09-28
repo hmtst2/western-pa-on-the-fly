@@ -5,8 +5,8 @@
     <!-- Sets the character encoding for the webpage -->
     <meta charset="UTF-8">
 
-    <!-- Helps the webpage display properly on different screen sizes -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the webpage responsive to the width of the user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Connects this webpage to the external CSS stylesheet -->
     <link href="styles.css" rel="stylesheet">
@@ -17,27 +17,53 @@
 
 <body>
 
-    <!-- Main heading for the Fly Guide page -->
-    <h1>Fly Guide</h1>
+    <!-- Semantic header contains the page heading and navigation -->
+    <header>
 
-    <h2 class="section-heading">About the Fly Guide</h2>
+        <!-- Main heading for the Fly Guide page -->
+        <h1>Fly Guide</h1>
 
-    <p>
-        This page will provide information about different fly patterns used
-        for trout fishing in Western Pennsylvania.
-    </p>
+        <!-- Consistent navigation menu used on every page -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="fly-guide.html">Fly Guide</a>
+            <a href="hatch-guide.html">Hatch Guide</a>
+        </nav>
 
-    <h2 class="section-heading">Types of Flies</h2>
+    </header>
 
-    <p>
-        The guide will eventually include dry flies, nymphs, wet flies,
-        emergers, and streamers.
-    </p>
+    <!-- Main contains the primary content of this page -->
+    <main>
 
-    <p>
-        Each pattern can include information such as its name, size, color,
-        what it imitates, and the situations in which it can be effective.
-    </p>
+        <!-- Introduces the purpose of the Fly Guide -->
+        <h2 class="section-heading">About the Fly Guide</h2>
+
+        <p>
+            This page will provide information about different fly patterns
+            used for trout fishing in Western Pennsylvania.
+        </p>
+
+        <!-- Introduces the major categories of flies -->
+        <h2 class="section-heading">Types of Flies</h2>
+
+        <p>
+            The guide will eventually include dry flies, nymphs, wet flies,
+            emergers, and streamers.
+        </p>
+
+        <p>
+            Each pattern can include information such as its name, size,
+            color, what it imitates, and the situations in which it can
+            be effective.
+        </p>
+
+    </main>
+
+    <!-- Semantic footer contains information about the website -->
+    <footer>
+        <p>Western PA on the Fly</p>
+    </footer>
 
 </body>
 

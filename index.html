@@ -5,8 +5,8 @@
     <!-- Sets the character encoding for the webpage -->
     <meta charset="UTF-8">
 
-    <!-- Helps the webpage display properly on different screen sizes -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the webpage responsive to the width of the user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Connects this webpage to the external CSS stylesheet -->
     <link href="styles.css" rel="stylesheet">
@@ -22,10 +22,17 @@
     <title>Western PA on the Fly</title>
 </head>
 
-<!-- The home-page class adds the Downy Run background to only this page -->
-<body class="home-page">
+<body>
 
-    <!-- Navigation menu containing links to the main pages -->
+    <!-- Semantic header creates a solid area for the website title -->
+    <header class="site-header">
+
+        <!-- The site-title ID applies unique styling and the Week 5 text effect -->
+        <h1 id="site-title">Western PA on the Fly</h1>
+
+    </header>
+
+    <!-- Consistent navigation menu used on every page -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
@@ -33,45 +40,53 @@
         <a href="hatch-guide.html">Hatch Guide</a>
     </nav>
 
-    <!-- The site-title ID applies unique styling to the main website title -->
-    <h1 id="site-title">Western PA on the Fly</h1>
+    <!-- The home-page class places the Downy Run background behind
+         only the main content area of the homepage -->
+    <main class="home-page">
 
-    <!-- The section-heading class applies the brown heading color -->
-    <h2 class="section-heading">About This Website</h2>
+        <!-- The section-heading class applies the brown heading color -->
+        <h2 class="section-heading">About This Website</h2>
 
-    <p>
-        Western PA on the Fly is a website dedicated to fly fishing in
-        Western Pennsylvania. The site combines my personal experiences
-        on the water with information about trout, fly patterns, aquatic
-        insects, fishing techniques, equipment, and the seasonal changes
-        that affect fly fishing throughout the year.
-    </p>
+        <p>
+            Western PA on the Fly is a website dedicated to fly fishing in
+            Western Pennsylvania. The site combines my personal experiences
+            on the water with information about trout, fly patterns, aquatic
+            insects, fishing techniques, equipment, and the seasonal changes
+            that affect fly fishing throughout the year.
+        </p>
 
-    <!-- Another use of the reusable section-heading class -->
-    <h2 class="section-heading">Fly Fishing in Western Pennsylvania</h2>
+        <!-- Another use of the reusable section-heading class -->
+        <h2 class="section-heading">Fly Fishing in Western Pennsylvania</h2>
 
-    <p title="Western Pennsylvania Fly Fishing">
-        Western Pennsylvania offers a wide variety of streams and fishing
-        opportunities for fly anglers. This website serves as both a
-        personal fly fishing journal and an educational resource based on
-        what I learn and observe while spending time on the water.
-    </p>
+        <p title="Western Pennsylvania Fly Fishing">
+            Western Pennsylvania offers a wide variety of streams and fishing
+            opportunities for fly anglers. This website serves as both a
+            personal fly fishing journal and an educational resource based on
+            what I learn and observe while spending time on the water.
+        </p>
 
-    <!-- Provides an external resource related to fishing in Pennsylvania -->
-    <p>
-        Visit the
-        <a href="https://www.pa.gov/agencies/fishandboat" target="_blank">
-            Pennsylvania Fish and Boat Commission
-        </a>
-        for fishing regulations and other information about fishing in Pennsylvania.
-    </p>
+        <!-- Provides an external resource related to fishing in Pennsylvania -->
+        <p>
+            Visit the
+            <a href="https://www.pa.gov/agencies/fishandboat" target="_blank">
+                Pennsylvania Fish and Boat Commission
+            </a>
+            for fishing regulations and other information about fishing in Pennsylvania.
+        </p>
 
-    <hr>
+        <hr>
 
-    <!-- Inline CSS gives this paragraph the orange accent color -->
-    <p style="color: #c86b2b;">
-        <strong>Welcome to Western PA on the Fly!</strong>
-    </p>
+        <!-- Inline CSS gives this paragraph the orange accent color -->
+        <p style="color: #c86b2b;">
+            <strong>Welcome to Western PA on the Fly!</strong>
+        </p>
+
+    </main>
+
+    <!-- Semantic footer contains information about the website -->
+    <footer>
+        <p>Western PA on the Fly</p>
+    </footer>
 
 </body>
 

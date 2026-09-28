@@ -5,8 +5,8 @@
     <!-- Sets the character encoding for the webpage -->
     <meta charset="UTF-8">
 
-    <!-- Helps the webpage display properly on different screen sizes -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the webpage responsive to the width of the user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Connects this webpage to the external CSS stylesheet -->
     <link href="styles.css" rel="stylesheet">
@@ -17,35 +17,58 @@
 
 <body>
 
-    <!-- Main heading for the About Me page -->
-    <h1>About Me</h1>
+    <!-- Semantic header contains the page heading and navigation -->
+    <header>
 
-    <!-- Introduces my interest in fly fishing -->
-    <p>
-        I created Western PA on the Fly to share my interest in fly fishing
-        and my experiences fishing throughout Western Pennsylvania.
-    </p>
+        <!-- Main heading for the About Me page -->
+        <h1>About Me</h1>
 
-    <!-- The about-photo ID controls the size of this image -->
-    <img id="about-photo"
-         src="brown-trout-fly-fishing.jpg"
-         alt="Fly angler holding a brown trout caught in Western Pennsylvania">
+        <!-- Consistent navigation menu used on every page -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="fly-guide.html">Fly Guide</a>
+            <a href="hatch-guide.html">Hatch Guide</a>
+        </nav>
 
-    <!-- The section-heading class applies the brown heading color -->
-    <h2 class="section-heading">Why I Enjoy Fly Fishing</h2>
+    </header>
 
-    <p>
-        I enjoy learning about trout, aquatic insects, fly patterns, fishing
-        techniques, and the different conditions that can affect a day on
-        the water.
-    </p>
+    <!-- Main contains the primary content of this page -->
+    <main>
 
-    <h2 class="section-heading">About the Project</h2>
+        <!-- Introduces my interest in fly fishing -->
+        <p>
+            I created Western PA on the Fly to share my interest in fly fishing
+            and my experiences fishing throughout Western Pennsylvania.
+        </p>
 
-    <p>
-        This website will continue to grow throughout the semester as I learn
-        more about HTML, CSS, JavaScript, and web development.
-    </p>
+        <!-- Responsive image of a brown trout caught while fly fishing -->
+        <img id="about-photo"
+             src="brown-trout-fly-fishing.jpg"
+             alt="Fly angler holding a brown trout caught in Western Pennsylvania">
+
+        <!-- The section-heading class applies the brown heading color -->
+        <h2 class="section-heading">Why I Enjoy Fly Fishing</h2>
+
+        <p>
+            I enjoy learning about trout, aquatic insects, fly patterns,
+            fishing techniques, and the different conditions that can affect
+            a day on the water.
+        </p>
+
+        <h2 class="section-heading">About the Project</h2>
+
+        <p>
+            This website will continue to grow throughout the semester as I
+            learn more about HTML, CSS, JavaScript, and web development.
+        </p>
+
+    </main>
+
+    <!-- Semantic footer contains information about the website -->
+    <footer>
+        <p>Western PA on the Fly</p>
+    </footer>
 
 </body>
 
