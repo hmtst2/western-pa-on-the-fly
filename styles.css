@@ -21,14 +21,12 @@ p {
     color: #4f5b5c;
 }
 
-/* The section-heading class is used by h2 tags to give
-   section headings the muted brown accent color. */
+/* Gives section headings the muted brown accent color. */
 .section-heading {
     color: #6b513b;
 }
 
-/* The site-title ID is used by the main h1 tag on index.html.
-   It also applies the text-transform effect learned in Week 5. */
+/* Applies the Week 5 text effect to the homepage title. */
 #site-title {
     text-transform: uppercase;
 }
@@ -44,8 +42,7 @@ p {
     padding: 20px;
 }
 
-/* Removes extra margin around the homepage title so the
-   header spacing is controlled by its padding. */
+/* Removes extra margin around the title. */
 .site-header h1 {
     margin: 0;
 }
@@ -69,8 +66,7 @@ nav a {
     color: #f6f2e8;
 }
 
-/* Changes the navigation background when the mouse
-   hovers over a link. */
+/* Changes the navigation background when hovering over a link. */
 nav a:hover {
     background-color: #6b513b;
 }
@@ -78,12 +74,17 @@ nav a:hover {
 
 /* ---------- MAIN PAGE LAYOUT ---------- */
 
-/* Centers the main content and limits it to 80% of the page width. */
+/* Centers content inside main sections. */
 main {
+    text-align: center;
+}
+
+/* Controls the width of main content on pages other than
+   the homepage. */
+main:not(.home-page) {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -91,20 +92,34 @@ main {
 
 /* ---------- HOMEPAGE BACKGROUND ---------- */
 
-/* The home-page class is used by the main tag on index.html.
-   This keeps the Downy Run image behind the homepage content
-   without allowing it to appear behind the title or navigation. */
+/* Creates a full-width homepage section containing the
+   Downy Run background illustration.
+
+   "contain" keeps the entire image visible instead of
+   cropping the bottom of the illustration. */
 .home-page {
+    width: 100%;
     background-image: url("downy-run-background.png");
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: contain;
+    min-height: 70vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Keeps the homepage text centered within 80% of the page
+   while allowing the background to use the full width. */
+.home-content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /* ---------- RESPONSIVE IMAGE ---------- */
 
-/* The about-photo ID is used by the img tag on about.html.
+/* The about-photo ID is used by the image on about.html.
    Percentage sizing allows the image to respond to page width. */
 #about-photo {
     width: 50%;
@@ -114,10 +129,68 @@ main {
 }
 
 
+/* ---------- CONTACT FORM ---------- */
+
+/* Centers the contact form and limits its width. */
+#contact-form {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* Places each form label on its own line. */
+#contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #6b513b;
+    font-weight: bold;
+}
+
+/* Styles the text, email, and date input fields. */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Styles the larger message area. */
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Styles the Submit button. */
+#contact-form input[type="submit"] {
+    background-color: #1f3d2b;
+    color: #f6f2e8;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Changes the Submit button when hovered over. */
+#contact-form input[type="submit"]:hover {
+    background-color: #6b513b;
+}
+
+/* Styles the JavaScript form response. */
+#form-response {
+    color: #1f3d2b;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
 /* ---------- FOOTER ---------- */
 
-/* Centers the semantic footer and gives it the site's
-   off-white background color. */
+/* Centers the semantic footer. */
 footer {
     background-color: #f6f2e8;
     text-align: center;
@@ -127,12 +200,17 @@ footer {
 
 /* ---------- TABLET RESPONSIVENESS ---------- */
 
-/* Adjusts the layout for tablets and screens
-   900px wide or smaller. */
+/* Adjusts the layout for screens 900px wide or smaller. */
 @media screen and (max-width: 900px) {
 
-    /* Gives the main content more room on smaller screens. */
-    main {
+    /* Gives regular page content more room. */
+    main:not(.home-page) {
+        width: 90%;
+    }
+
+    /* Gives homepage content more room without changing
+       the background image behavior. */
+    .home-content {
         width: 90%;
     }
 
@@ -142,22 +220,25 @@ footer {
         width: 70%;
     }
 
-    /* Adjusts the homepage background for smaller screens. */
-    .home-page {
-        background-size: auto 100%;
+    /* Makes the contact form wider on tablets. */
+    #contact-form {
+        width: 75%;
     }
 }
 
 
 /* ---------- PHONE RESPONSIVENESS ---------- */
 
-/* Adjusts the layout for phones and screens
-   600px wide or smaller. */
+/* Adjusts the layout for screens 600px wide or smaller. */
 @media screen and (max-width: 600px) {
 
-    /* Uses almost the full screen while preserving
-       a small amount of space along each side. */
-    main {
+    /* Uses almost the full screen for regular page content. */
+    main:not(.home-page) {
+        width: 95%;
+    }
+
+    /* Uses almost the full screen for homepage content. */
+    .home-content {
         width: 95%;
     }
 
@@ -172,8 +253,13 @@ footer {
         display: block;
     }
 
-    /* Reduces the title size so it fits smaller screens. */
+    /* Reduces the title size for smaller screens. */
     #site-title {
         font-size: 1.6em;
+    }
+
+    /* Makes the contact form fit comfortably on phones. */
+    #contact-form {
+        width: 90%;
     }
 }

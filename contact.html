@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets the character encoding for the webpage -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive to the width of the user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Connects this webpage to the external CSS stylesheet -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- The title appears in the browser tab -->
+    <title>Contact - Western PA on the Fly</title>
+</head>
+
+<body>
+
+    <!-- Semantic header contains the page heading -->
+    <header class="site-header">
+        <h1>Contact</h1>
+    </header>
+
+    <!-- Consistent navigation menu used on every page -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="fly-guide.html">Fly Guide</a>
+        <a href="hatch-guide.html">Hatch Guide</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main contains the primary content of the Contact page -->
+    <main>
+
+        <h2 class="section-heading">Contact Western PA on the Fly</h2>
+
+        <p>
+            Have a question about fly fishing in Western Pennsylvania,
+            a fishing report, or a suggestion for the website?
+            Complete the form below.
+        </p>
+
+        <!-- JavaScript will display the current date and time here -->
+        <p id="date-time"></p>
+
+        <!-- Contact form containing multiple input types -->
+        <form id="contact-form">
+
+            <!-- Name field is required before the form can be submitted -->
+            <label for="name">Name:</label>
+            <input type="text"
+                   id="name"
+                   name="name"
+                   required>
+
+            <!-- Email field uses the email input type for validation -->
+            <label for="email">Email:</label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   required>
+
+            <!-- Subject field is required -->
+            <label for="subject">Subject:</label>
+            <input type="text"
+                   id="subject"
+                   name="subject"
+                   required>
+
+            <!-- Message field allows the user to enter a longer response -->
+            <label for="message">Message:</label>
+            <textarea id="message"
+                      name="message"
+                      rows="5"
+                      required></textarea>
+
+            <!-- Interactive date field -->
+            <label for="fishing-date">Date of Fishing Trip:</label>
+            <input type="date"
+                   id="fishing-date"
+                   name="fishing-date">
+
+            <!-- Submit button -->
+            <input type="submit" value="Submit">
+
+        </form>
+
+        <!-- JavaScript response will appear here after submission -->
+        <p id="form-response"></p>
+
+    </main>
+
+    <!-- Semantic footer contains information about the website -->
+    <footer>
+        <p>Western PA on the Fly</p>
+    </footer>
+
+
+    <!-- JavaScript used for the Week 7 assignment -->
+    <script>
+
+        // Displays the current date and time on the Contact page
+        const currentDate = new Date();
+
+        document.getElementById("date-time").innerHTML =
+            "Current Date and Time: " + currentDate.toLocaleString();
+
+
+        // Responds when the contact form is successfully submitted
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+
+            // Prevents the demonstration form from reloading the webpage
+            event.preventDefault();
+
+            // Displays a response after the form passes HTML validation
+            document.getElementById("form-response").innerHTML =
+                "Thank you! Your form was completed successfully.";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
