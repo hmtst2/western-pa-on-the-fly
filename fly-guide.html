@@ -11,6 +11,9 @@
     <!-- Connects this webpage to the external CSS stylesheet -->
     <link href="styles.css" rel="stylesheet">
 
+    <!-- Loads the jQuery library from Google's CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- The title appears in the browser tab -->
     <title>Fly Guide - Western PA on the Fly</title>
 </head>
@@ -59,12 +62,87 @@
             be effective.
         </p>
 
+        <!-- ---------- JQUERY BONUS ASSIGNMENT ---------- -->
+
+        <!-- This section demonstrates jQuery selectors, events, and effects -->
+        <section id="fishing-tips-section">
+
+            <h2 class="section-heading">Fly Fishing Tips</h2>
+
+            <p>
+                Click the button below to show or hide some helpful
+                fly fishing tips for Western Pennsylvania.
+            </p>
+
+            <!-- Button that will trigger the jQuery animation -->
+            <button id="tips-button" type="button">
+                Show/Hide Fly Fishing Tips
+            </button>
+
+            <!-- This content will be shown or hidden using jQuery -->
+            <div id="fishing-tips">
+
+                <h3>Helpful Tips for Fly Anglers</h3>
+
+                <ul>
+                    <li>
+                        Match your fly patterns to the aquatic insects
+                        present in the stream.
+                    </li>
+
+                    <li>
+                        Pay attention to water temperature and stream
+                        conditions when planning a fishing trip.
+                    </li>
+
+                    <li>
+                        Use natural presentations and avoid excessive
+                        drag when fishing dry flies.
+                    </li>
+
+                    <li>
+                        Explore different fly patterns throughout the
+                        fishing season.
+                    </li>
+
+                    <li>
+                        Practice proper catch-and-release techniques
+                        to help protect trout populations.
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
     </main>
 
     <!-- Semantic footer contains information about the website -->
     <footer>
         <p>Western PA on the Fly</p>
     </footer>
+
+    <!-- ---------- JQUERY BONUS ASSIGNMENT ---------- -->
+
+    <script>
+
+        // Waits until the HTML document is ready before running jQuery
+        $(document).ready(function() {
+
+            // Hides the fishing tips when the webpage first loads
+            $("#fishing-tips").hide();
+
+            // Detects when the visitor clicks the fishing tips button
+            $("#tips-button").click(function() {
+
+                // Slides the fishing tips open or closed when clicked
+                $("#fishing-tips").slideToggle(600);
+
+            });
+
+        });
+
+    </script>
 
 </body>
 
