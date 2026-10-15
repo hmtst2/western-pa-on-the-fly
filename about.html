@@ -2,73 +2,240 @@
 <html lang="en">
 
 <head>
-    <!-- Sets the character encoding for the webpage -->
+    <!-- Basic HTML metadata -->
     <meta charset="UTF-8">
 
-    <!-- Makes the webpage responsive to the width of the user's device -->
+    <!-- Makes the website responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Connects this webpage to the external CSS stylesheet -->
-    <link href="styles.css" rel="stylesheet">
+    <!-- Website description -->
+    <meta name="description"
+          content="Learn about the angler behind Western PA on the Fly.">
 
-    <!-- The title appears in the browser tab -->
-    <title>About Me - Western PA on the Fly</title>
+    <!-- Browser tab title -->
+    <title>About Me | Western PA on the Fly</title>
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Semantic header contains the page heading and navigation -->
-    <header>
+    <!-- ========================================= -->
+    <!-- WEBSITE HEADER                            -->
+    <!-- ========================================= -->
 
-        <!-- Main heading for the About Me page -->
-        <h1>About Me</h1>
+    <header class="site-header">
 
-        <!-- Consistent navigation menu used on every page -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="fly-guide.html">Fly Guide</a>
-            <a href="hatch-guide.html">Hatch Guide</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <h1 id="site-title">Western PA on the Fly</h1>
+
+        <p>Trout streams, fly patterns &amp; life on the water</p>
 
     </header>
 
-    <!-- Main contains the primary content of this page -->
-    <main>
 
-        <!-- Introduces my interest in fly fishing -->
-        <p>
-            I created Western PA on the Fly to share my interest in fly fishing
-            and my experiences fishing throughout Western Pennsylvania.
-        </p>
+    <!-- ========================================= -->
+    <!-- NAVIGATION MENU                           -->
+    <!-- ========================================= -->
 
-        <!-- Responsive image of a brown trout caught while fly fishing -->
-        <img id="about-photo"
-             src="brown-trout-fly-fishing.jpg"
-             alt="Fly angler holding a brown trout caught in Western Pennsylvania">
+    <!-- Same navigation menu used on every page -->
 
-        <!-- The section-heading class applies the brown heading color -->
-        <h2 class="section-heading">Why I Enjoy Fly Fishing</h2>
+    <nav class="site-nav" aria-label="Main navigation">
 
-        <p>
-            I enjoy learning about trout, aquatic insects, fly patterns,
-            fishing techniques, and the different conditions that can affect
-            a day on the water.
-        </p>
+        <a href="index.html">Home</a>
 
-        <h2 class="section-heading">About the Project</h2>
+        <a href="about.html">About Me</a>
 
-        <p>
-            This website will continue to grow throughout the semester as I
-            learn more about HTML, CSS, JavaScript, and web development.
-        </p>
+        <a href="fly-guide.html">Fly Guide</a>
+
+        <a href="hatch-guide.html">Hatch Guide</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <!-- ========================================= -->
+    <!-- MAIN PAGE CONTENT                         -->
+    <!-- ========================================= -->
+
+    <main class="content-wrap">
+
+        <!-- PAGE INTRODUCTION -->
+
+        <section>
+
+            <h2>About Me</h2>
+
+            <p>
+                I created Western PA on the Fly to share my
+                interest in fly fishing and my experiences
+                fishing throughout Western Pennsylvania.
+            </p>
+
+            <p>
+                I enjoy exploring local trout streams, learning
+                about aquatic insects, and experimenting with
+                different fly patterns and fishing techniques.
+            </p>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- PERSONAL FISHING PHOTOGRAPH               -->
+        <!-- ========================================= -->
+
+        <figure class="feature-figure portrait-photo">
+
+            <!-- Photograph of a brown trout I caught -->
+
+            <img
+                src="media/brown-trout-fly-fishing.jpg"
+                alt="Fly angler holding a brown trout beside a stream"
+                loading="lazy"
+            >
+
+            <figcaption>
+                A brown trout caught while fly fishing
+                in Western Pennsylvania.
+            </figcaption>
+
+        </figure>
+
+
+        <!-- ========================================= -->
+        <!-- WHY I ENJOY FLY FISHING                   -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Why I Enjoy Fly Fishing</h2>
+
+            <p>
+                One of my favorite aspects of fly fishing is
+                that every trip presents a different challenge.
+                Water conditions, insect activity, and trout
+                behavior can change from one day to the next.
+            </p>
+
+            <p>
+                Fly fishing requires patience, observation,
+                and problem-solving skills. From selecting
+                the right fly to making an accurate cast,
+                there is always something new to learn.
+            </p>
+
+            <p>
+                I also enjoy the opportunity to spend time
+                outdoors and experience the natural beauty
+                of Western Pennsylvania's streams.
+            </p>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- CATCH AND RELEASE SECTION                 -->
+        <!-- ========================================= -->
+
+        <section class="media-section">
+
+            <h2>Catch and Release</h2>
+
+            <p>
+                Practicing responsible catch and release
+                can help protect trout populations and
+                preserve fishing opportunities.
+            </p>
+
+            <p>
+                When releasing a trout, it is important to
+                minimize handling, keep the fish in the
+                water whenever possible, and allow it to
+                recover before swimming away.
+            </p>
+
+            <p>
+                The following video shows a rainbow trout
+                being released into clear water at Vitondale,
+                Pennsylvania.
+            </p>
+
+
+            <!-- ========================================= -->
+            <!-- HTML5 MULTIMEDIA: RAINBOW TROUT RELEASE   -->
+            <!-- ========================================= -->
+
+            <!--
+                This video was originally recorded vertically.
+
+                The video-portrait CSS class will limit its
+                width while maintaining its original shape.
+            -->
+
+            <video
+                class="video-portrait"
+                controls
+                preload="metadata"
+                playsinline
+            >
+
+                <source
+                    src="media/Vitondale_Rainbow.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support HTML5 video.
+
+            </video>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- ABOUT THE WEBSITE PROJECT                 -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>About This Website</h2>
+
+            <p>
+                Western PA on the Fly was developed as a
+                student web design project for CSIT 260:
+                Web Programming I at Mount Aloysius College.
+            </p>
+
+            <p>
+                The website combines my personal interest
+                in fly fishing with the HTML, CSS, and
+                JavaScript skills I have learned throughout
+                the course.
+            </p>
+
+            <p>
+                Visit the Fly Guide to learn about artificial
+                fly patterns, or explore the Hatch Guide
+                to learn about aquatic insects found in
+                trout streams.
+            </p>
+
+        </section>
 
     </main>
 
-    <!-- Semantic footer contains information about the website -->
-    <footer>
-        <p>Western PA on the Fly</p>
+
+    <!-- ========================================= -->
+    <!-- WEBSITE FOOTER                           -->
+    <!-- ========================================= -->
+
+    <footer class="site-footer">
+
+        <p>
+            Western PA on the Fly &bull; A Student Web Design Project
+        </p>
+
     </footer>
 
 </body>

@@ -2,123 +2,296 @@
 <html lang="en">
 
 <head>
-    <!-- Sets the character encoding for the webpage -->
+    <!-- ========================================= -->
+    <!-- BASIC HTML METADATA                       -->
+    <!-- ========================================= -->
+
     <meta charset="UTF-8">
 
-    <!-- Makes the webpage responsive to the width of the user's device -->
+    <!-- Makes the website responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Connects this webpage to the external CSS stylesheet -->
-    <link href="styles.css" rel="stylesheet">
+    <!-- Website description -->
+    <meta name="description"
+          content="Contact Western PA on the Fly and share your fly fishing experiences.">
 
-    <!-- The title appears in the browser tab -->
-    <title>Contact - Western PA on the Fly</title>
+    <!-- Browser tab title -->
+    <title>Contact | Western PA on the Fly</title>
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
-    <!-- Semantic header contains the page heading -->
+    <!-- ========================================= -->
+    <!-- WEBSITE HEADER                            -->
+    <!-- ========================================= -->
+
     <header class="site-header">
-        <h1>Contact</h1>
+
+        <h1 id="site-title">Western PA on the Fly</h1>
+
+        <p>Trout streams, fly patterns &amp; life on the water</p>
+
     </header>
 
-    <!-- Consistent navigation menu used on every page -->
-    <nav>
+
+    <!-- ========================================= -->
+    <!-- NAVIGATION MENU                           -->
+    <!-- ========================================= -->
+
+    <!-- Same navigation menu used on every page -->
+
+    <nav class="site-nav" aria-label="Main navigation">
+
         <a href="index.html">Home</a>
+
         <a href="about.html">About Me</a>
+
         <a href="fly-guide.html">Fly Guide</a>
+
         <a href="hatch-guide.html">Hatch Guide</a>
+
         <a href="contact.html">Contact</a>
+
     </nav>
 
-    <!-- Main contains the primary content of the Contact page -->
-    <main>
 
-        <h2 class="section-heading">Contact Western PA on the Fly</h2>
+    <!-- ========================================= -->
+    <!-- MAIN PAGE CONTENT                         -->
+    <!-- ========================================= -->
 
-        <p>
-            Have a question about fly fishing in Western Pennsylvania,
-            a fishing report, or a suggestion for the website?
-            Complete the form below.
-        </p>
+    <main class="content-wrap">
 
-        <!-- JavaScript will display the current date and time here -->
+        <!-- ========================================= -->
+        <!-- CONTACT PAGE INTRODUCTION                -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Contact Western PA on the Fly</h2>
+
+            <p>
+                Have a question about fly fishing,
+                a fishing experience to share,
+                or a suggestion for the website?
+            </p>
+
+            <p>
+                Use the demonstration contact form below
+                to enter your information and message.
+            </p>
+
+            <p>
+                <strong>
+                    Please note: This form is for demonstration
+                    purposes and does not send messages.
+                </strong>
+            </p>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- JAVASCRIPT DATE AND TIME DISPLAY          -->
+        <!-- ========================================= -->
+
+        <!--
+            JavaScript will insert the current date
+            and time into this paragraph.
+        -->
+
         <p id="date-time"></p>
 
-        <!-- Contact form containing multiple input types -->
+
+        <!-- ========================================= -->
+        <!-- CONTACT FORM                              -->
+        <!-- ========================================= -->
+
+        <!--
+            The form uses HTML5 validation.
+
+            The required attribute prevents submission
+            when mandatory fields are left empty.
+
+            JavaScript prevents actual submission and
+            displays a confirmation message.
+        -->
+
         <form id="contact-form">
 
-            <!-- Name field is required before the form can be submitted -->
-            <label for="name">Name:</label>
-            <input type="text"
-                   id="name"
-                   name="name"
-                   required>
 
-            <!-- Email field uses the email input type for validation -->
-            <label for="email">Email:</label>
-            <input type="email"
-                   id="email"
-                   name="email"
-                   required>
+            <!-- ========================================= -->
+            <!-- NAME FIELD                                -->
+            <!-- ========================================= -->
 
-            <!-- Subject field is required -->
-            <label for="subject">Subject:</label>
-            <input type="text"
-                   id="subject"
-                   name="subject"
-                   required>
+            <label for="name">Name</label>
 
-            <!-- Message field allows the user to enter a longer response -->
-            <label for="message">Message:</label>
-            <textarea id="message"
-                      name="message"
-                      rows="5"
-                      required></textarea>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+            >
 
-            <!-- Interactive date field -->
-            <label for="fishing-date">Date of Fishing Trip:</label>
-            <input type="date"
-                   id="fishing-date"
-                   name="fishing-date">
 
-            <!-- Submit button -->
-            <input type="submit" value="Submit">
+            <!-- ========================================= -->
+            <!-- EMAIL FIELD                               -->
+            <!-- ========================================= -->
+
+            <label for="email">Email Address</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+            >
+
+
+            <!-- ========================================= -->
+            <!-- SUBJECT FIELD                             -->
+            <!-- ========================================= -->
+
+            <label for="subject">Subject</label>
+
+            <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Enter a subject"
+                required
+            >
+
+
+            <!-- ========================================= -->
+            <!-- MESSAGE FIELD                             -->
+            <!-- ========================================= -->
+
+            <label for="message">Message</label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Enter your message"
+                required
+            ></textarea>
+
+
+            <!-- ========================================= -->
+            <!-- OPTIONAL FISHING TRIP DATE                -->
+            <!-- ========================================= -->
+
+            <label for="fishing-date">
+                Date of Fishing Trip (Optional)
+            </label>
+
+            <input
+                type="date"
+                id="fishing-date"
+                name="fishing-date"
+            >
+
+
+            <!-- ========================================= -->
+            <!-- SUBMIT BUTTON                             -->
+            <!-- ========================================= -->
+
+            <button type="submit">
+                Check Form
+            </button>
 
         </form>
 
-        <!-- JavaScript response will appear here after submission -->
-        <p id="form-response"></p>
+
+        <!-- ========================================= -->
+        <!-- JAVASCRIPT FORM RESPONSE                  -->
+        <!-- ========================================= -->
+
+        <!--
+            JavaScript will display a confirmation
+            message inside this paragraph.
+
+            aria-live allows screen readers to
+            announce the message when it appears.
+        -->
+
+        <p
+            id="form-response"
+            role="status"
+            aria-live="polite"
+        ></p>
 
     </main>
 
-    <!-- Semantic footer contains information about the website -->
-    <footer>
-        <p>Western PA on the Fly</p>
+
+    <!-- ========================================= -->
+    <!-- WEBSITE FOOTER                           -->
+    <!-- ========================================= -->
+
+    <footer class="site-footer">
+
+        <p>
+            Western PA on the Fly &bull; A Student Web Design Project
+        </p>
+
     </footer>
 
 
-    <!-- JavaScript used for the Week 7 assignment -->
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT                                 -->
+    <!-- ========================================= -->
+
     <script>
 
-        // Displays the current date and time on the Contact page
+        // =========================================
+        // DISPLAY CURRENT DATE AND TIME
+        // =========================================
+
+        // Create a Date object using the visitor's
+        // current local date and time.
         const currentDate = new Date();
 
-        document.getElementById("date-time").innerHTML =
-            "Current Date and Time: " + currentDate.toLocaleString();
+        // Find the paragraph with the ID "date-time"
+        // and display the formatted date and time.
+        document.getElementById("date-time").textContent =
+            "Current Date and Time: " +
+            currentDate.toLocaleString();
 
 
-        // Responds when the contact form is successfully submitted
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
+        // =========================================
+        // CONTACT FORM VALIDATION AND CONFIRMATION
+        // =========================================
 
-            // Prevents the demonstration form from reloading the webpage
-            event.preventDefault();
+        // Find the contact form and listen for
+        // the submit event.
+        document.getElementById("contact-form")
+            .addEventListener("submit", function(event) {
 
-            // Displays a response after the form passes HTML validation
-            document.getElementById("form-response").innerHTML =
-                "Thank you! Your form was completed successfully.";
+                // Prevent the form from submitting
+                // or refreshing the webpage.
+                event.preventDefault();
 
-        });
+                // HTML5 validation runs before this
+                // event handler when required fields
+                // are missing or an email is invalid.
+
+                // Display a confirmation message
+                // after the form passes validation.
+                document.getElementById("form-response").textContent =
+                    "Form validation successful! " +
+                    "Thank you for completing the form. " +
+                    "This is a demonstration form, " +
+                    "so your message has not been sent.";
+
+            });
 
     </script>
 

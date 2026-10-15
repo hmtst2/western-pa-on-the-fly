@@ -2,38 +2,39 @@
 <html lang="en">
 
 <head>
-    <!-- Sets the character encoding for the webpage -->
+    <!-- Basic HTML metadata -->
     <meta charset="UTF-8">
 
-    <!-- Makes the webpage responsive to the width of the user's device -->
+    <!-- Makes the website responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Connects this webpage to the external CSS stylesheet -->
-    <link href="styles.css" rel="stylesheet">
+    <!-- Website description -->
+    <meta name="description"
+          content="Fly fishing, trout, artificial flies, and aquatic insects in Western Pennsylvania.">
 
-    <!-- Embedded CSS overrides the external h1 color on this page -->
-    <style>
-        h1 {
-            color: #6b513b;
-        }
-    </style>
+    <!-- Browser tab title -->
+    <title>Home | Western PA on the Fly</title>
 
-    <!-- The title appears in the browser tab -->
-    <title>Western PA on the Fly</title>
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Semantic header creates a solid area for the website title -->
+    <!-- ========================================= -->
+    <!-- WEBSITE HEADER                            -->
+    <!-- ========================================= -->
+
     <header class="site-header">
-
-        <!-- The site-title ID applies unique styling and the Week 5 text effect -->
         <h1 id="site-title">Western PA on the Fly</h1>
-
+        <p>Trout streams, fly patterns &amp; life on the water</p>
     </header>
 
-    <!-- Consistent navigation menu used on every page -->
-    <nav>
+    <!-- ========================================= -->
+    <!-- NAVIGATION MENU                           -->
+    <!-- ========================================= -->
+
+    <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
         <a href="fly-guide.html">Fly Guide</a>
@@ -41,60 +42,138 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- The home-page class creates the full-width area containing
-         the Downy Run background image -->
+    <!-- ========================================= -->
+    <!-- MAIN HOMEPAGE CONTENT                     -->
+    <!-- ========================================= -->
+
     <main class="home-page">
 
-        <!-- The home-content class centers the text separately from
-             the full-width homepage background -->
-        <div class="home-content">
+        <div class="content-wrap home-content">
 
-            <!-- The section-heading class applies the brown heading color -->
-            <h2 class="section-heading">About This Website</h2>
+            <!-- WEBSITE INTRODUCTION -->
+            <section class="intro-panel">
+
+                <h2>Welcome to Western PA on the Fly</h2>
+
+                <p>
+                    Explore fly fishing in Western Pennsylvania through
+                    personal experiences on the water, practical information
+                    about artificial flies, and a closer look at the
+                    aquatic insects trout feed on.
+                </p>
+
+                <p>
+                    Whether you are learning to identify a hatch or deciding
+                    what to tie on, this website is a starting point for
+                    discovering our region's trout streams.
+                </p>
+
+            </section>
+
+            <!-- ========================================= -->
+            <!-- WEBSITE PAGE OVERVIEW                    -->
+            <!-- ========================================= -->
+
+            <section aria-labelledby="explore-heading">
+
+                <h2 id="explore-heading">Explore the Website</h2>
+
+                <div class="card-grid">
+
+                    <!-- ABOUT ME CARD -->
+                    <article class="info-card">
+
+                        <h3>About Me</h3>
+
+                        <p>
+                            Learn about my experiences fly fishing
+                            in Western Pennsylvania.
+                        </p>
+
+                        <a href="about.html">Meet the Angler</a>
+
+                    </article>
+
+                    <!-- FLY GUIDE CARD -->
+                    <article class="info-card">
+
+                        <h3>Fly Guide</h3>
+
+                        <p>
+                            Compare dry flies, nymphs, emergers,
+                            and streamers.
+                        </p>
+
+                        <a href="fly-guide.html">Explore Fly Patterns</a>
+
+                    </article>
+
+                    <!-- HATCH GUIDE CARD -->
+                    <article class="info-card">
+
+                        <h3>Hatch Guide</h3>
+
+                        <p>
+                            Learn about aquatic insects and
+                            seasonal trout food sources.
+                        </p>
+
+                        <a href="hatch-guide.html">Explore the Hatches</a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ========================================= -->
+            <!-- FEATURED STREAM PHOTOGRAPH               -->
+            <!-- ========================================= -->
+
+            <figure class="feature-figure">
+
+                <img
+                    src="media/Slippery_Beaver.jpg"
+                    alt="Clear Western Pennsylvania trout stream surrounded by trees"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    A view of the water that inspires Western PA on the Fly.
+                </figcaption>
+
+            </figure>
+
+            <!-- ========================================= -->
+            <!-- EXTERNAL RESOURCE                        -->
+            <!-- ========================================= -->
 
             <p>
-                Western PA on the Fly is a website dedicated to fly fishing in
-                Western Pennsylvania. The site combines my personal experiences
-                on the water with information about trout, fly patterns, aquatic
-                insects, fishing techniques, equipment, and the seasonal changes
-                that affect fly fishing throughout the year.
-            </p>
+                For current fishing regulations and licensing information,
+                visit the
 
-            <!-- Another use of the reusable section-heading class -->
-            <h2 class="section-heading">Fly Fishing in Western Pennsylvania</h2>
-
-            <p title="Western Pennsylvania Fly Fishing">
-                Western Pennsylvania offers a wide variety of streams and fishing
-                opportunities for fly anglers. This website serves as both a
-                personal fly fishing journal and an educational resource based on
-                what I learn and observe while spending time on the water.
-            </p>
-
-            <!-- Provides an external resource related to fishing in Pennsylvania -->
-            <p>
-                Visit the
-                <a href="https://www.pa.gov/agencies/fishandboat" target="_blank">
+                <a
+                    href="https://www.pa.gov/agencies/fishandboat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Pennsylvania Fish and Boat Commission
-                </a>
-                for fishing regulations and other information about fishing in Pennsylvania.
-            </p>
-
-            <hr>
-
-            <!-- Inline CSS gives this paragraph the orange accent color -->
-            <p style="color: #c86b2b;">
-                <strong>Welcome to Western PA on the Fly!</strong>
+                </a>.
             </p>
 
         </div>
 
     </main>
 
-    <!-- Semantic footer contains information about the website -->
-    <footer>
-        <p>Western PA on the Fly</p>
+    <!-- ========================================= -->
+    <!-- WEBSITE FOOTER                           -->
+    <!-- ========================================= -->
+
+    <footer class="site-footer">
+        <p>
+            Western PA on the Fly &bull; A Student Web Design Project
+        </p>
     </footer>
 
 </body>
-
 </html>

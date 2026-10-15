@@ -2,113 +2,380 @@
 <html lang="en">
 
 <head>
-    <!-- Sets the character encoding for the webpage -->
+    <!-- ========================================= -->
+    <!-- BASIC HTML METADATA                       -->
+    <!-- ========================================= -->
+
     <meta charset="UTF-8">
 
-    <!-- Makes the webpage responsive to the width of the user's device -->
+    <!-- Makes the website responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Connects this webpage to the external CSS stylesheet -->
-    <link href="styles.css" rel="stylesheet">
+    <!-- Website description -->
+    <meta name="description"
+          content="Learn about dry flies, nymphs, emergers, and streamers used for trout fishing in Western Pennsylvania.">
 
-    <!-- Loads the jQuery library from Google's CDN -->
+    <!-- Browser tab title -->
+    <title>Fly Guide | Western PA on the Fly</title>
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--
+        jQuery library hosted by Google.
+
+        This library allows us to use the slideToggle()
+        animation for the interactive fishing tips section.
+    -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- The title appears in the browser tab -->
-    <title>Fly Guide - Western PA on the Fly</title>
 </head>
 
 <body>
 
-    <!-- Semantic header contains the page heading and navigation -->
-    <header>
+    <!-- ========================================= -->
+    <!-- WEBSITE HEADER                            -->
+    <!-- ========================================= -->
 
-        <!-- Main heading for the Fly Guide page -->
-        <h1>Fly Guide</h1>
+    <header class="site-header">
 
-        <!-- Consistent navigation menu used on every page -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="fly-guide.html">Fly Guide</a>
-            <a href="hatch-guide.html">Hatch Guide</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <h1 id="site-title">Western PA on the Fly</h1>
+
+        <p>Trout streams, fly patterns &amp; life on the water</p>
 
     </header>
 
-    <!-- Main contains the primary content of this page -->
-    <main>
 
-        <!-- Introduces the purpose of the Fly Guide -->
-        <h2 class="section-heading">About the Fly Guide</h2>
+    <!-- ========================================= -->
+    <!-- NAVIGATION MENU                           -->
+    <!-- ========================================= -->
 
-        <p>
-            This page will provide information about different fly patterns
-            used for trout fishing in Western Pennsylvania.
-        </p>
+    <!-- Same navigation menu used on every page -->
 
-        <!-- Introduces the major categories of flies -->
-        <h2 class="section-heading">Types of Flies</h2>
+    <nav class="site-nav" aria-label="Main navigation">
 
-        <p>
-            The guide will eventually include dry flies, nymphs, wet flies,
-            emergers, and streamers.
-        </p>
+        <a href="index.html">Home</a>
 
-        <p>
-            Each pattern can include information such as its name, size,
-            color, what it imitates, and the situations in which it can
-            be effective.
-        </p>
+        <a href="about.html">About Me</a>
 
-        <!-- ---------- JQUERY BONUS ASSIGNMENT ---------- -->
+        <a href="fly-guide.html">Fly Guide</a>
 
-        <!-- This section demonstrates jQuery selectors, events, and effects -->
-        <section id="fishing-tips-section">
+        <a href="hatch-guide.html">Hatch Guide</a>
 
-            <h2 class="section-heading">Fly Fishing Tips</h2>
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <!-- ========================================= -->
+    <!-- MAIN PAGE CONTENT                         -->
+    <!-- ========================================= -->
+
+    <main class="content-wrap">
+
+        <!-- ========================================= -->
+        <!-- FLY GUIDE INTRODUCTION                    -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Fly Guide</h2>
 
             <p>
-                Click the button below to show or hide some helpful
-                fly fishing tips for Western Pennsylvania.
+                Fly fishing involves using artificial flies
+                to imitate the natural food sources that trout
+                feed on in streams and rivers.
             </p>
 
-            <!-- Button that will trigger the jQuery animation -->
-            <button id="tips-button" type="button">
-                Show/Hide Fly Fishing Tips
+            <p>
+                Different types of flies are designed to imitate
+                insects, baitfish, and other aquatic organisms
+                at various stages of their life cycles.
+            </p>
+
+            <p>
+                The three main categories covered in this guide
+                are dry flies, nymphs and emergers, and streamers.
+            </p>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- DRY FLIES                                 -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Dry Flies</h2>
+
+            <p>
+                Dry flies are artificial flies designed to
+                float on the surface of the water.
+            </p>
+
+            <p>
+                They typically imitate adult aquatic insects,
+                such as mayflies and caddisflies, or terrestrial
+                insects that fall into the water.
+            </p>
+
+            <p>
+                Dry fly fishing can be especially exciting
+                because anglers can often watch trout rise
+                to take the fly directly from the surface.
+            </p>
+
+            <p>
+                Common dry fly patterns include the Adams,
+                Parachute Adams, Elk Hair Caddis,
+                and Light Cahill.
+            </p>
+
+            <!-- Photograph of dry flies -->
+
+            <figure class="feature-figure">
+
+                <img
+                    src="media/DryFlies.jpg"
+                    alt="Open fly box containing a variety of dry fly patterns"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    A selection of dry fly patterns
+                    from my personal fly collection.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- NYMPHS AND EMERGERS                       -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Nymphs and Emergers</h2>
+
+            <p>
+                Nymphs imitate immature aquatic insects
+                that live beneath the water's surface.
+            </p>
+
+            <p>
+                Because trout frequently feed underwater,
+                nymph fishing can be productive even when
+                there is little visible surface activity.
+            </p>
+
+            <p>
+                Emerger patterns imitate aquatic insects
+                transitioning from their underwater stages
+                into winged adults.
+            </p>
+
+            <p>
+                Common examples include Pheasant Tail Nymphs,
+                Hare's Ear Nymphs, Zebra Midges,
+                and soft-hackle emergers.
+            </p>
+
+            <!-- Photograph of nymph and emerger patterns -->
+
+            <figure class="feature-figure">
+
+                <img
+                    src="media/Nymphs_Emergers.jpg"
+                    alt="Fly box containing nymph and emerger fly patterns"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Nymph and emerger patterns used
+                    for fishing beneath the surface.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- STREAMERS                                 -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Streamers</h2>
+
+            <p>
+                Streamers are larger artificial flies
+                that imitate baitfish, leeches,
+                crayfish, and other aquatic prey.
+            </p>
+
+            <p>
+                Unlike dry flies, streamers are generally
+                fished beneath the water's surface.
+                Anglers may retrieve them through the water
+                to imitate the movement of swimming prey.
+            </p>
+
+            <p>
+                Streamer fishing can be particularly effective
+                when trout are actively pursuing larger food
+                sources.
+            </p>
+
+            <p>
+                Popular streamer patterns include Woolly Buggers,
+                Muddler Minnows, and Sculpzilla patterns.
+            </p>
+
+            <!-- Photograph of streamer fly collection -->
+
+            <figure class="feature-figure">
+
+                <img
+                    src="media/Streamers.jpg"
+                    alt="Fly box containing streamer patterns beside a trout stream"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Streamer patterns from my personal
+                    fly collection.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- DRY FLY FISHING VIDEO                     -->
+        <!-- ========================================= -->
+
+        <section class="media-section">
+
+            <h2>Dry Fly Fishing in Action</h2>
+
+            <p>
+                One of the most exciting moments in fly fishing
+                is watching a trout rise to take a dry fly
+                from the surface.
+            </p>
+
+            <p>
+                The following video was recorded while
+                fly fishing at Vitondale, Pennsylvania.
+                It shows a brook trout rising to take
+                my dry fly before being landed and released.
+            </p>
+
+            <!--
+                HTML5 multimedia example.
+
+                This video was recorded vertically.
+
+                The video-portrait CSS class limits the
+                displayed width while preserving the
+                original video orientation.
+            -->
+
+            <video
+                class="video-portrait"
+                controls
+                preload="metadata"
+                playsinline
+            >
+
+                <source
+                    src="media/Vitondale_DryFly_Eat.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support HTML5 video.
+
+            </video>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- INTERACTIVE JQUERY FISHING TIPS           -->
+        <!-- ========================================= -->
+
+        <section id="fishing-tips-section">
+
+            <h2>Helpful Fly Fishing Tips</h2>
+
+            <p>
+                Click the button below to reveal or hide
+                a few helpful tips for fishing local
+                trout streams.
+            </p>
+
+            <!--
+                This button is controlled by jQuery.
+
+                aria-expanded indicates whether the
+                fishing tips are currently visible.
+            -->
+
+            <button
+                id="tips-button"
+                type="button"
+                aria-controls="fishing-tips"
+                aria-expanded="false"
+            >
+                Show Fishing Tips
             </button>
 
-            <!-- This content will be shown or hidden using jQuery -->
-            <div id="fishing-tips">
 
-                <h3>Helpful Tips for Fly Anglers</h3>
+            <!--
+                Fishing tips container.
+
+                The hidden attribute keeps the tips
+                concealed until jQuery initializes.
+            -->
+
+            <div id="fishing-tips" hidden>
+
+                <h3>Tips for Fly Anglers</h3>
 
                 <ul>
+
                     <li>
-                        Match your fly patterns to the aquatic insects
-                        present in the stream.
+                        Observe insects on and around the water
+                        before choosing a fly pattern.
                     </li>
 
                     <li>
-                        Pay attention to water temperature and stream
-                        conditions when planning a fishing trip.
+                        Pay attention to water temperature,
+                        stream flow, and weather conditions.
                     </li>
 
                     <li>
-                        Use natural presentations and avoid excessive
-                        drag when fishing dry flies.
+                        When fishing dry flies, try to achieve
+                        a natural drift without dragging
+                        the fly across the surface.
                     </li>
 
                     <li>
-                        Explore different fly patterns throughout the
-                        fishing season.
+                        When nymph fishing, experiment with
+                        different depths and presentations.
                     </li>
 
                     <li>
-                        Practice proper catch-and-release techniques
-                        to help protect trout populations.
+                        Handle trout carefully and minimize
+                        their time out of the water when
+                        practicing catch and release.
                     </li>
+
                 </ul>
 
             </div>
@@ -117,26 +384,59 @@
 
     </main>
 
-    <!-- Semantic footer contains information about the website -->
-    <footer>
-        <p>Western PA on the Fly</p>
+
+    <!-- ========================================= -->
+    <!-- WEBSITE FOOTER                           -->
+    <!-- ========================================= -->
+
+    <footer class="site-footer">
+
+        <p>
+            Western PA on the Fly &bull; A Student Web Design Project
+        </p>
+
     </footer>
 
-    <!-- ---------- JQUERY BONUS ASSIGNMENT ---------- -->
+
+    <!-- ========================================= -->
+    <!-- JQUERY SCRIPT                             -->
+    <!-- ========================================= -->
 
     <script>
 
-        // Waits until the HTML document is ready before running jQuery
-        $(document).ready(function() {
+        // Wait until the HTML document has finished loading.
+        $(document).ready(function () {
 
-            // Hides the fishing tips when the webpage first loads
-            $("#fishing-tips").hide();
+            // Select the fishing tips container.
+            const tips = $("#fishing-tips");
 
-            // Detects when the visitor clicks the fishing tips button
-            $("#tips-button").click(function() {
+            // Hide the tips initially.
+            // Remove the HTML hidden attribute so jQuery
+            // can control the visibility of the element.
+            tips.hide().removeAttr("hidden");
 
-                // Slides the fishing tips open or closed when clicked
-                $("#fishing-tips").slideToggle(600);
+            // Run this function whenever the button is clicked.
+            $("#tips-button").click(function () {
+
+                // Determine whether the tips are currently open.
+                const isExpanded =
+                    $(this).attr("aria-expanded") === "true";
+
+                // Animate the tips opening or closing.
+                tips.slideToggle(500);
+
+                // Update the accessibility attribute.
+                $(this).attr(
+                    "aria-expanded",
+                    String(!isExpanded)
+                );
+
+                // Change the button text based on its state.
+                $(this).text(
+                    isExpanded
+                        ? "Show Fishing Tips"
+                        : "Hide Fishing Tips"
+                );
 
             });
 

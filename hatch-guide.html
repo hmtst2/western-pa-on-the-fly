@@ -2,68 +2,450 @@
 <html lang="en">
 
 <head>
-    <!-- Sets the character encoding for the webpage -->
+    <!-- ========================================= -->
+    <!-- BASIC HTML METADATA                       -->
+    <!-- ========================================= -->
+
     <meta charset="UTF-8">
 
-    <!-- Makes the webpage responsive to the width of the user's device -->
+    <!-- Makes the website responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Connects this webpage to the external CSS stylesheet -->
-    <link href="styles.css" rel="stylesheet">
+    <!-- Website description -->
+    <meta name="description"
+          content="Learn about aquatic insects, trout hatches, and seasonal insect activity in Western Pennsylvania.">
 
-    <!-- The title appears in the browser tab -->
-    <title>Hatch Guide - Western PA on the Fly</title>
+    <!-- Browser tab title -->
+    <title>Hatch Guide | Western PA on the Fly</title>
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
-    <!-- Semantic header contains the page heading and navigation -->
-    <header>
+    <!-- ========================================= -->
+    <!-- WEBSITE HEADER                            -->
+    <!-- ========================================= -->
 
-        <!-- Main heading for the Hatch Guide page -->
-        <h1>Hatch Guide</h1>
+    <header class="site-header">
 
-        <!-- Consistent navigation menu used on every page -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="fly-guide.html">Fly Guide</a>
-            <a href="hatch-guide.html">Hatch Guide</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <h1 id="site-title">Western PA on the Fly</h1>
+
+        <p>Trout streams, fly patterns &amp; life on the water</p>
 
     </header>
 
-    <!-- Main contains the primary content of this page -->
-    <main>
 
-        <!-- Introduces the purpose of the Hatch Guide -->
-        <h2 class="section-heading">Understanding the Hatch</h2>
+    <!-- ========================================= -->
+    <!-- NAVIGATION MENU                           -->
+    <!-- ========================================= -->
 
-        <p>
-            This page will focus on the aquatic insects and other food
-            sources that trout feed on throughout the year.
-        </p>
+    <!-- Same navigation menu used on every page -->
 
-        <!-- Introduces the major insect groups -->
-        <h2 class="section-heading">Common Insect Groups</h2>
+    <nav class="site-nav" aria-label="Main navigation">
 
-        <p>
-            Future content will include mayflies, caddisflies, stoneflies,
-            midges, and terrestrials.
-        </p>
+        <a href="index.html">Home</a>
 
-        <p>
-            Understanding insect life cycles and seasonal hatches can help
-            anglers choose fly patterns that more closely match the food
-            trout are feeding on.
-        </p>
+        <a href="about.html">About Me</a>
+
+        <a href="fly-guide.html">Fly Guide</a>
+
+        <a href="hatch-guide.html">Hatch Guide</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <!-- ========================================= -->
+    <!-- MAIN PAGE CONTENT                         -->
+    <!-- ========================================= -->
+
+    <main class="content-wrap">
+
+        <!-- ========================================= -->
+        <!-- HATCH GUIDE INTRODUCTION                  -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Hatch Guide</h2>
+
+            <p>
+                Understanding aquatic insects is an important
+                part of successful fly fishing.
+            </p>
+
+            <p>
+                Trout feed on a variety of insects throughout
+                the year, and knowing which insects are active
+                can help anglers select appropriate fly patterns.
+            </p>
+
+            <p>
+                A hatch generally refers to aquatic insects
+                emerging from the water into their winged
+                adult stage.
+            </p>
+
+            <p>
+                Hatch timing can vary depending on water
+                temperature, weather conditions, stream
+                location, and the time of year.
+            </p>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- AQUATIC INSECT IDENTIFICATION             -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Common Aquatic Insects</h2>
+
+            <p>
+                Several groups of aquatic insects are
+                especially important to trout anglers.
+                These include mayflies, caddisflies,
+                stoneflies, and midges.
+            </p>
+
+            <!-- Grid containing aquatic insect information -->
+            <div class="card-grid insect-grid">
+
+
+                <!-- ========================================= -->
+                <!-- MAYFLIES                                  -->
+                <!-- ========================================= -->
+
+                <article class="info-card">
+
+                    <img
+                        src="media/Mayfly_PMD.jpg"
+                        alt="Pale mayfly resting on a person's hand"
+                        loading="lazy"
+                    >
+
+                    <h3>Mayflies</h3>
+
+                    <p>
+                        Mayflies spend most of their lives
+                        underwater as nymphs before emerging
+                        into winged adults.
+                    </p>
+
+                    <p>
+                        Mayflies are commonly imitated using
+                        nymph, emerger, dry fly, and spinner
+                        patterns.
+                    </p>
+
+                    <p>
+                        Common examples include Blue-Winged
+                        Olives, Hendricksons, March Browns,
+                        and Light Cahills.
+                    </p>
+
+                </article>
+
+
+                <!-- ========================================= -->
+                <!-- CADDISFLIES                               -->
+                <!-- ========================================= -->
+
+                <article class="info-card">
+
+                    <img
+                        src="media/Caddisfly.jpg"
+                        alt="Caddisfly photographed near a trout stream"
+                        loading="lazy"
+                    >
+
+                    <h3>Caddisflies</h3>
+
+                    <p>
+                        Caddisflies begin their lives underwater
+                        as larvae. Some species build protective
+                        cases from sand, small stones, or
+                        plant material.
+                    </p>
+
+                    <p>
+                        They eventually develop into pupae
+                        before emerging as winged adults.
+                    </p>
+
+                    <p>
+                        Popular fly patterns include the
+                        Elk Hair Caddis and various
+                        caddis larva and pupa imitations.
+                    </p>
+
+                </article>
+
+
+                <!-- ========================================= -->
+                <!-- STONEFLIES                                -->
+                <!-- ========================================= -->
+
+                <article class="info-card">
+
+                    <img
+                        src="media/Stonefly.jpg"
+                        alt="Stonefly photographed on a person's hand"
+                        loading="lazy"
+                    >
+
+                    <h3>Stoneflies</h3>
+
+                    <p>
+                        Stoneflies spend their immature
+                        stages underwater as nymphs.
+                    </p>
+
+                    <p>
+                        Unlike many mayflies, stonefly
+                        nymphs usually crawl onto rocks
+                        or vegetation before emerging
+                        into winged adults.
+                    </p>
+
+                    <p>
+                        Stonefly nymph patterns can be
+                        effective when fishing near
+                        the streambed.
+                    </p>
+
+                </article>
+
+
+                <!-- ========================================= -->
+                <!-- INSECT LIFE STAGES                        -->
+                <!-- ========================================= -->
+
+                <article class="info-card">
+
+                    <img
+                        src="media/Mayfly_Emergers.jpg"
+                        alt="Aquatic insects gathered on a wet log near a stream"
+                        loading="lazy"
+                    >
+
+                    <h3>Insect Life Stages</h3>
+
+                    <p>
+                        Aquatic insects pass through different
+                        developmental stages.
+                    </p>
+
+                    <p>
+                        Some are available to trout as
+                        underwater larvae or nymphs,
+                        while others become vulnerable
+                        during emergence or as adults.
+                    </p>
+
+                    <p>
+                        Observing insects around rocks,
+                        logs, and the water's surface
+                        can help anglers determine
+                        which fly patterns to use.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- SEASONAL HATCH REFERENCE                  -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <h2>Seasonal Hatch Reference</h2>
+
+            <p>
+                Different aquatic insects become active
+                throughout the fishing season.
+            </p>
+
+            <p>
+                The following table provides a general
+                overview of common insect activity
+                in Western Pennsylvania.
+            </p>
+
+            <p>
+                Actual hatch timing varies by stream,
+                elevation, and weather conditions.
+            </p>
+
+
+            <!--
+                This container allows the table to scroll
+                horizontally on smaller mobile screens.
+            -->
+
+            <div class="table-scroll">
+
+                <table>
+
+                    <!-- TABLE HEADER -->
+                    <thead>
+
+                        <tr>
+                            <th scope="col">Season</th>
+                            <th scope="col">Common Insects</th>
+                            <th scope="col">Suggested Fly Patterns</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <!-- TABLE BODY -->
+                    <tbody>
+
+                        <!-- SPRING -->
+                        <tr>
+
+                            <td>Spring</td>
+
+                            <td>
+                                Quill Gordons, Hendricksons,
+                                Blue-Winged Olives
+                            </td>
+
+                            <td>
+                                Quill Gordon, Hendrickson,
+                                BWO patterns
+                            </td>
+
+                        </tr>
+
+
+                        <!-- LATE SPRING AND SUMMER -->
+                        <tr>
+
+                            <td>Late Spring / Summer</td>
+
+                            <td>
+                                March Browns, Light Cahills,
+                                caddisflies
+                            </td>
+
+                            <td>
+                                March Brown, Light Cahill,
+                                Elk Hair Caddis
+                            </td>
+
+                        </tr>
+
+
+                        <!-- FALL -->
+                        <tr>
+
+                            <td>Fall</td>
+
+                            <td>
+                                Blue-Winged Olives, midges,
+                                some caddisflies
+                            </td>
+
+                            <td>
+                                BWO patterns, Zebra Midges,
+                                caddis imitations
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- UNDERWATER TROUT VIDEO                    -->
+        <!-- ========================================= -->
+
+        <section class="media-section">
+
+            <h2>Trout Beneath the Surface</h2>
+
+            <p>
+                While aquatic insects are an important
+                food source for trout, understanding
+                the environment where trout live
+                is equally valuable.
+            </p>
+
+            <p>
+                Trout often use underwater structure,
+                current changes, and deeper areas
+                of streams for shelter and feeding.
+            </p>
+
+            <p>
+                The following GoPro video was recorded
+                underwater at Slippery Beaver Creek.
+                It shows several rainbow and brown
+                trout swimming through clear water.
+            </p>
+
+
+            <!-- ========================================= -->
+            <!-- HTML5 MULTIMEDIA: UNDERWATER GOPRO VIDEO   -->
+            <!-- ========================================= -->
+
+            <!--
+                This video was recorded horizontally.
+
+                The video-landscape CSS class allows
+                the footage to display at a larger width
+                while maintaining its original aspect ratio.
+            -->
+
+            <video
+                class="video-landscape"
+                controls
+                preload="metadata"
+                playsinline
+            >
+
+                <source
+                    src="media/Slippery_Beaver_Underwater.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support HTML5 video.
+
+            </video>
+
+        </section>
 
     </main>
 
-    <!-- Semantic footer contains information about the website -->
-    <footer>
-        <p>Western PA on the Fly</p>
+
+    <!-- ========================================= -->
+    <!-- WEBSITE FOOTER                           -->
+    <!-- ========================================= -->
+
+    <footer class="site-footer">
+
+        <p>
+            Western PA on the Fly &bull; A Student Web Design Project
+        </p>
+
     </footer>
 
 </body>
