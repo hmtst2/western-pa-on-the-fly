@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <!-- Basic HTML metadata -->
+    <!-- ========================================= -->
+    <!-- BASIC HTML METADATA                       -->
+    <!-- ========================================= -->
+
     <meta charset="UTF-8">
 
     <!-- Makes the website responsive on mobile devices -->
@@ -10,13 +13,14 @@
 
     <!-- Website description -->
     <meta name="description"
-          content="Learn about the angler behind Western PA on the Fly.">
+          content="Learn about the creator of Western PA on the Fly, his passion for fly fishing, and his experiences on Pennsylvania trout streams.">
 
     <!-- Browser tab title -->
     <title>About Me | Western PA on the Fly</title>
 
     <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
@@ -38,7 +42,7 @@
     <!-- NAVIGATION MENU                           -->
     <!-- ========================================= -->
 
-    <!-- Same navigation menu used on every page -->
+    <!-- Consistent navigation across all five pages -->
 
     <nav class="site-nav" aria-label="Main navigation">
 
@@ -61,47 +65,85 @@
 
     <main class="content-wrap">
 
-        <!-- PAGE INTRODUCTION -->
+
+        <!-- ========================================= -->
+        <!-- ABOUT ME INTRODUCTION                     -->
+        <!-- ========================================= -->
 
         <section>
 
             <h2>About Me</h2>
 
             <p>
-                I created Western PA on the Fly to share my
-                interest in fly fishing and my experiences
-                fishing throughout Western Pennsylvania.
+                Welcome to Western PA on the Fly!
+                I created this website to share my
+                passion for fly fishing and the
+                experiences I've had exploring
+                trout streams throughout
+                Western Pennsylvania.
             </p>
 
             <p>
-                I enjoy exploring local trout streams, learning
-                about aquatic insects, and experimenting with
-                different fly patterns and fishing techniques.
+                Fly fishing has become one of my
+                favorite outdoor activities because
+                it combines time spent in nature
+                with the challenge of understanding
+                trout behavior, aquatic insects,
+                and different fishing techniques.
+            </p>
+
+            <p>
+                Living in Western Pennsylvania
+                provides opportunities to explore
+                a variety of streams, creeks,
+                and rivers that support trout
+                populations.
             </p>
 
         </section>
 
 
         <!-- ========================================= -->
-        <!-- PERSONAL FISHING PHOTOGRAPH               -->
+        <!-- PERSONAL FLY FISHING PHOTOGRAPH           -->
         <!-- ========================================= -->
 
-        <figure class="feature-figure portrait-photo">
+        <section>
 
-            <!-- Photograph of a brown trout I caught -->
+            <h2>Life on the Water</h2>
 
-            <img
-                src="media/brown-trout-fly-fishing.jpg"
-                alt="Fly angler holding a brown trout beside a stream"
-                loading="lazy"
-            >
+            <p>
+                One of the things I enjoy most about
+                fly fishing is the opportunity to
+                experience different streams and
+                spend time outdoors.
+            </p>
 
-            <figcaption>
-                A brown trout caught while fly fishing
-                in Western Pennsylvania.
-            </figcaption>
+            <!--
+                CORRECTED IMAGE PATH
 
-        </figure>
+                The photograph is located inside
+                the media folder.
+
+                The filename is:
+                brown-trout-fly-fishing.jpg
+            -->
+
+            <figure class="feature-figure portrait-photo">
+
+                <img
+                    src="media/brown-trout-fly-fishing.jpg"
+                    alt="Holding a brown trout caught while fly fishing in Pennsylvania"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    A brown trout caught while
+                    fly fishing in Pennsylvania.
+                </figcaption>
+
+            </figure>
+
+        </section>
 
 
         <!-- ========================================= -->
@@ -113,23 +155,34 @@
             <h2>Why I Enjoy Fly Fishing</h2>
 
             <p>
-                One of my favorite aspects of fly fishing is
-                that every trip presents a different challenge.
-                Water conditions, insect activity, and trout
-                behavior can change from one day to the next.
+                Fly fishing is different from many
+                other forms of fishing because
+                success often depends on understanding
+                the natural environment.
             </p>
 
             <p>
-                Fly fishing requires patience, observation,
-                and problem-solving skills. From selecting
-                the right fly to making an accurate cast,
-                there is always something new to learn.
+                Identifying insects, selecting the
+                appropriate fly pattern, and making
+                a natural presentation all contribute
+                to the experience.
             </p>
 
             <p>
-                I also enjoy the opportunity to spend time
-                outdoors and experience the natural beauty
-                of Western Pennsylvania's streams.
+                I also enjoy the patience and
+                attention to detail that fly fishing
+                requires. Every trip offers an
+                opportunity to learn something new,
+                whether it's discovering a new
+                fishing location or improving
+                a particular technique.
+            </p>
+
+            <p>
+                Beyond catching fish, fly fishing
+                provides an opportunity to appreciate
+                the streams, wildlife, and natural
+                landscapes of Western Pennsylvania.
             </p>
 
         </section>
@@ -145,33 +198,41 @@
 
             <p>
                 Practicing responsible catch and release
-                can help protect trout populations and
-                preserve fishing opportunities.
+                is an important part of protecting
+                trout populations and preserving
+                fishing opportunities.
             </p>
 
             <p>
-                When releasing a trout, it is important to
-                minimize handling, keep the fish in the
-                water whenever possible, and allow it to
-                recover before swimming away.
+                When releasing trout, anglers should
+                minimize handling, keep fish in the
+                water whenever possible, and avoid
+                unnecessary stress.
             </p>
 
             <p>
-                The following video shows a rainbow trout
-                being released into clear water at Vitondale,
-                Pennsylvania.
+                The following video was recorded
+                while fly fishing at Vitondale,
+                Pennsylvania. It shows a rainbow
+                trout being released back into
+                the stream.
             </p>
 
 
             <!-- ========================================= -->
-            <!-- HTML5 MULTIMEDIA: RAINBOW TROUT RELEASE   -->
+            <!-- HTML5 VIDEO: RAINBOW TROUT RELEASE        -->
             <!-- ========================================= -->
 
             <!--
-                This video was originally recorded vertically.
+                CORRECTED VIDEO PATH
 
-                The video-portrait CSS class will limit its
-                width while maintaining its original shape.
+                The video is located inside:
+                media/Vitondale_Rainbow.mp4
+
+                This is a vertical video.
+
+                The video-portrait class in styles.css
+                controls its displayed width.
             -->
 
             <video
@@ -194,7 +255,7 @@
 
 
         <!-- ========================================= -->
-        <!-- ABOUT THE WEBSITE PROJECT                 -->
+        <!-- ABOUT THE WEBSITE                        -->
         <!-- ========================================= -->
 
         <section>
@@ -202,23 +263,25 @@
             <h2>About This Website</h2>
 
             <p>
-                Western PA on the Fly was developed as a
-                student web design project for CSIT 260:
-                Web Programming I at Mount Aloysius College.
+                Western PA on the Fly was developed
+                as a student web design project
+                for CSIT 260: Web Programming I
+                at Mount Aloysius College.
             </p>
 
             <p>
-                The website combines my personal interest
-                in fly fishing with the HTML, CSS, and
-                JavaScript skills I have learned throughout
-                the course.
+                The website combines HTML, CSS,
+                JavaScript, photographs, and videos
+                to create an informational resource
+                about fly fishing.
             </p>
 
             <p>
-                Visit the Fly Guide to learn about artificial
-                fly patterns, or explore the Hatch Guide
-                to learn about aquatic insects found in
-                trout streams.
+                My goal was to create a website
+                that reflects my personal interests
+                while demonstrating the web
+                development skills learned
+                throughout the course.
             </p>
 
         </section>

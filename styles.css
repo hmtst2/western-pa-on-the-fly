@@ -1,915 +1,779 @@
-/* ==========================================================
-   WESTERN PA ON THE FLY
-   FINAL WEBSITE STYLESHEET
-
-   CSIT 260 - Web Programming I
-
-   This external stylesheet controls the appearance of
-   all five pages of the Western PA on the Fly website.
-
-   COLOR SCHEME:
-   Forest Green: #1f3d2b
-   Brown:        #6b513b
-   Cream:        #f6f2e8
-   Slate Gray:   #4f5b5c
-   Tan:          #b89b72
-   ========================================================== */
+/* ========================================= */
+/* WESTERN PA ON THE FLY                     */
+/* CSIT 260 - WEB PROGRAMMING I              */
+/* EXTERNAL CSS STYLESHEET                   */
+/* ========================================= */
 
 
-/* ==========================================================
-   SECTION 1: GENERAL WEBSITE STYLING
-   ========================================================== */
-
-/*
-   The universal selector applies box-sizing to all elements.
-
-   This makes responsive layouts easier because padding
-   and borders are included in an element's total width.
-*/
+/* ========================================= */
+/* GLOBAL STYLES                             */
+/* ========================================= */
 
 * {
     box-sizing: border-box;
 }
 
-
-/* Overall website appearance */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     padding: 0;
 
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #26372d;
     background-color: #f6f2e8;
-    color: #4f5b5c;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
 }
-
-
-/* General heading appearance */
 
 h1,
 h2,
 h3 {
+    font-family: Georgia, "Times New Roman", serif;
     line-height: 1.3;
 }
 
-
-/* Section headings use the brown color */
-
-h2,
-h3 {
-    color: #6b513b;
+h2 {
+    color: #294b38;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 18px;
 }
 
-
-/* Default paragraph spacing */
+h3 {
+    color: #355b43;
+    font-size: 1.3rem;
+    margin-top: 0;
+}
 
 p {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 18px;
 }
-
-
-/* Default hyperlink appearance */
 
 a {
-    color: #1f3d2b;
+    color: #315d47;
+    text-decoration: underline;
 }
-
-
-/* Changes hyperlink color when hovering */
 
 a:hover {
-    color: #c86b2b;
+    color: #193c2a;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #b78c49;
+    outline-offset: 3px;
 }
 
 
-/* Makes all images responsive by default */
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* ==========================================================
-   SECTION 2: WEBSITE HEADER
-   ========================================================== */
-
-/*
-   The site-header class is used on all five pages.
-
-   It creates a consistent header containing the
-   website title and subtitle.
-*/
+/* ========================================= */
+/* WEBSITE HEADER                            */
+/* ========================================= */
 
 .site-header {
-    background-color: #f6f2e8;
+    background-color: #294b38;
+    color: #ffffff;
 
     text-align: center;
 
-    padding: 24px 16px 18px;
+    padding: 36px 20px 30px;
 }
-
-
-/* Main website title */
 
 #site-title {
     margin: 0;
 
-    color: #6b513b;
-
-    text-align: center;
-    text-transform: uppercase;
-
-    letter-spacing: 0.06em;
-
-    /*
-       clamp() allows the font size to adjust
-       automatically based on screen width.
-    */
-
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-}
-
-
-/* Subtitle underneath the website title */
-
-.site-header p {
-    margin-top: 6px;
-    margin-bottom: 0;
-
-    color: #4f5b5c;
-
-    font-size: 0.95rem;
-}
-
-
-/* ==========================================================
-   SECTION 3: NAVIGATION MENU
-   ========================================================== */
-
-/*
-   The navigation menu appears on all five pages.
-
-   It uses a forest-green background with cream text.
-*/
-
-.site-nav {
-    background-color: #1f3d2b;
-
-    text-align: center;
-
-    margin: 0;
-    padding: 0 10px;
-}
-
-
-/* Individual navigation links */
-
-.site-nav a {
-    display: inline-block;
-
-    padding: 14px 17px;
-
-    color: #f6f2e8;
-
-    text-decoration: none;
-
+    font-size: 2.8rem;
     font-weight: bold;
-}
-
-
-/* Navigation hover and keyboard focus effects */
-
-.site-nav a:hover,
-.site-nav a:focus-visible {
-    background-color: #6b513b;
 
     color: #ffffff;
 }
 
+.site-header p {
+    margin: 10px 0 0;
 
-/* ==========================================================
-   SECTION 4: MAIN CONTENT LAYOUT
-   ========================================================== */
+    font-size: 1.05rem;
+    font-style: italic;
 
-/*
-   The content-wrap class centers page content.
+    color: #e5e9df;
+}
 
-   It also prevents paragraphs and other elements
-   from stretching across very wide monitors.
-*/
+
+/* ========================================= */
+/* NAVIGATION MENU                           */
+/* ========================================= */
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    padding: 12px 16px;
+
+    background-color: #d7dfd3;
+
+    border-bottom: 2px solid #b6c5b1;
+}
+
+.site-nav a {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    color: #244632;
+    text-decoration: none;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    background-color: #294b38;
+    color: #ffffff;
+}
+
+
+/* ========================================= */
+/* MAIN CONTENT CONTAINER                    */
+/* ========================================= */
 
 .content-wrap {
-    width: min(90%, 980px);
+    width: min(100% - 40px, 1050px);
 
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 
-    padding-top: 36px;
-    padding-bottom: 50px;
+    padding-top: 38px;
+    padding-bottom: 55px;
+}
 
-    text-align: center;
+main section {
+    margin-bottom: 38px;
+}
+
+main section:last-child {
+    margin-bottom: 0;
+}
+
+main ul {
+    padding-left: 25px;
+}
+
+main li {
+    margin-bottom: 10px;
 }
 
 
-/* Adds spacing between major page sections */
-
-.content-wrap > section {
-    margin-top: 38px;
-}
-
-
-/* Limits paragraph width for easier reading */
-
-.content-wrap p {
-    max-width: 780px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* ==========================================================
-   SECTION 5: HOMEPAGE BACKGROUND
-   ========================================================== */
+/* ========================================= */
+/* HOMEPAGE BACKGROUND                       */
+/* ========================================= */
 
 /*
-   This section displays the faded Downy Run illustration.
+    CORRECTED BACKGROUND IMAGE PATH
 
-   The illustration should already be lightened to
-   approximately 20-30% visual strength.
+    Actual GitHub filename:
+    media/downy-run-background.png
 
-   background-size: 100% auto preserves the original
-   image proportions without cropping the sides.
-
-   The cream background color matches the illustration.
+    The image is layered beneath a translucent
+    off-white overlay so that the illustration
+    remains subtle and text stays readable.
 */
 
 .home-page {
-    background-color: #f6f2e8;
-
-    background-image: url("media/downy-run-background.png");
-
-    background-position: center top;
-
-    background-repeat: no-repeat;
-
-    background-size: 100% auto;
+    position: relative;
 
     min-height: 70vh;
+
+    background-color: #f6f2e8;
+
+    background-image:
+        linear-gradient(
+            rgba(246, 242, 232, 0.76),
+            rgba(246, 242, 232, 0.76)
+        ),
+        url("media/downy-run-background.png");
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-
-/* Adds extra space above homepage content */
 
 .home-content {
-    padding-top: 40px;
+    position: relative;
+    z-index: 1;
 }
 
 
-/* ==========================================================
-   SECTION 6: HOMEPAGE INTRODUCTION PANEL
-   ========================================================== */
-
-/*
-   This panel sits over the faded illustration.
-
-   The semi-transparent cream background improves
-   text readability while allowing the illustration
-   to remain visible.
-*/
+/* ========================================= */
+/* HOMEPAGE INTRODUCTION PANEL               */
+/* ========================================= */
 
 .intro-panel {
-    max-width: 820px;
+    padding: 28px 30px;
 
-    margin-left: auto;
-    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.78);
 
-    padding: 20px 24px;
+    border: 1px solid rgba(80, 105, 80, 0.2);
+    border-radius: 10px;
 
-    background-color: rgba(246, 242, 232, 0.80);
-
-    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
 
 
-/* Removes extra spacing above the introduction heading */
-
-.intro-panel h2 {
-    margin-top: 0;
-}
-
-
-/* ==========================================================
-   SECTION 7: CONTENT CARDS
-   ========================================================== */
-
-/*
-   The card-grid class is used for the homepage
-   navigation cards and Hatch Guide insect cards.
-
-   CSS Grid automatically arranges the cards.
-*/
+/* ========================================= */
+/* RESPONSIVE CARD GRID                      */
+/* ========================================= */
 
 .card-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
-    gap: 20px;
+    gap: 22px;
 
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 24px;
 }
-
-
-/* Individual card styling */
 
 .info-card {
-    background-color: rgba(255, 255, 255, 0.85);
+    padding: 22px;
 
-    border: 1px solid #b89b72;
+    background-color: rgba(255, 255, 255, 0.92);
 
-    border-radius: 8px;
+    border: 1px solid #d5ddd0;
+    border-radius: 9px;
 
-    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
-
-
-/* Card headings */
 
 .info-card h3 {
-    margin-top: 0;
-
-    color: #6b513b;
+    margin-bottom: 12px;
 }
-
-
-/* Card paragraphs */
 
 .info-card p {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
-
-/* Homepage card links */
-
 .info-card a {
-    color: #1f3d2b;
-
     font-weight: bold;
 }
 
 
-/* Card link hover effect */
+/* ========================================= */
+/* PHOTOGRAPHS AND FIGURES                   */
+/* ========================================= */
 
-.info-card a:hover {
-    color: #c86b2b;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-
-/* ==========================================================
-   SECTION 8: PHOTOGRAPH STYLING
-   ========================================================== */
-
-/*
-   The feature-figure class is used for photographs
-   throughout the website.
-
-   It centers photographs and limits their width.
-*/
-
 .feature-figure {
-    max-width: 720px;
+    max-width: 850px;
 
-    margin: 28px auto;
+    margin: 25px auto;
 
     text-align: center;
 }
-
-
-/* Featured photograph styling */
 
 .feature-figure img {
     display: block;
 
     width: 100%;
+    height: auto;
 
-    max-height: 520px;
+    border-radius: 9px;
 
-    object-fit: contain;
+    border: 1px solid #cbd3c6;
 
-    margin-left: auto;
-    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
 
-    border-radius: 8px;
+figcaption {
+    margin-top: 12px;
+
+    font-size: 0.9rem;
+    font-style: italic;
+
+    color: #526356;
 }
 
 
-/* Narrower layout for portrait photographs */
+/* ========================================= */
+/* PORTRAIT PHOTOGRAPH                       */
+/* ========================================= */
 
 .portrait-photo {
     max-width: 500px;
 }
 
+.portrait-photo img {
+    width: 100%;
+    height: auto;
 
-/* Photograph captions */
-
-figcaption {
-    margin-top: 9px;
-
-    color: #4f5b5c;
-
-    font-size: 0.9rem;
-
-    font-style: italic;
+    object-fit: contain;
 }
 
 
-/* ==========================================================
-   SECTION 9: HATCH GUIDE INSECT PHOTOGRAPHS
-   ========================================================== */
-
-/*
-   The insect-grid class changes the Hatch Guide
-   from three columns to two columns on desktop.
-*/
+/* ========================================= */
+/* HATCH GUIDE INSECT GRID                   */
+/* ========================================= */
 
 .insect-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 }
 
-
-/* Insect photographs inside information cards */
+.insect-grid .info-card {
+    overflow: hidden;
+}
 
 .insect-grid .info-card img {
-    width: 100%;
+    display: block;
 
-    height: 260px;
+    width: 100%;
+    height: 240px;
 
     object-fit: cover;
 
-    border-radius: 5px;
+    margin-bottom: 18px;
 
-    margin-bottom: 15px;
+    border-radius: 6px;
+
+    border: 1px solid #d1d8cc;
 }
 
 
-/* ==========================================================
-   SECTION 10: MULTIMEDIA STYLING
-   ========================================================== */
-
-/*
-   These styles control all HTML5 videos.
-
-   The website includes both vertical and horizontal
-   videos, so separate classes are provided.
-*/
-
-
-/* Adds spacing around multimedia sections */
+/* ========================================= */
+/* HTML5 VIDEO STYLES                        */
+/* ========================================= */
 
 .media-section {
-    margin-top: 40px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #b89b72;
+    text-align: left;
 }
-
-
-/* Shared styling for all videos */
 
 video {
     display: block;
 
     max-width: 100%;
-
     height: auto;
 
-    margin: 20px auto;
+    margin: 25px auto;
 
-    border-radius: 8px;
+    background-color: #000000;
 
-    background-color: #111111;
+    border-radius: 9px;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 
-/*
-   Portrait videos:
-
-   Used for:
-   - Vitondale dry fly fishing video
-   - Vitondale rainbow trout release video
-
-   Limits the width so vertical videos do not
-   dominate the entire page.
+/* Vertical videos:
+   Vitondale rainbow trout release
+   Vitondale dry fly eat
 */
 
 .video-portrait {
-    width: min(100%, 375px);
+    width: 360px;
+    max-width: 100%;
 }
 
 
-/*
-   Landscape videos:
-
-   Used for:
-   - Slippery Beaver underwater GoPro video
-
-   Allows horizontal footage to display at
-   a larger width on desktop screens.
+/* Horizontal video:
+   Slippery Beaver underwater GoPro
 */
 
 .video-landscape {
-    width: min(100%, 800px);
+    width: 850px;
+    max-width: 100%;
 }
 
 
-/* ==========================================================
-   SECTION 11: JQUERY FISHING TIPS
-   ========================================================== */
-
-/*
-   This section styles the interactive fishing tips
-   on the Fly Guide page.
-
-   JavaScript/jQuery controls whether the tips
-   are visible or hidden.
-*/
-
-#fishing-tips-section {
-    max-width: 800px;
-
-    margin: 35px auto;
-
-    padding: 20px;
-
-    background-color: rgba(255, 255, 255, 0.85);
-
-    border: 2px solid #b89b72;
-
-    border-radius: 8px;
-}
-
-
-/* Fishing tips container */
-
-#fishing-tips {
-    max-width: 700px;
-
-    margin: 20px auto 0;
-
-    text-align: left;
-}
-
-
-/* Fishing tips list */
-
-#fishing-tips ul {
-    padding-left: 25px;
-}
-
-
-/* Spacing between individual tips */
-
-#fishing-tips li {
-    margin-bottom: 10px;
-}
-
-
-/* ==========================================================
-   SECTION 12: BUTTON STYLING
-   ========================================================== */
-
-/*
-   This button style is shared by:
-
-   - The Fly Guide fishing tips button
-   - The Contact page form button
-*/
-
-button {
-    background-color: #1f3d2b;
-
-    color: #f6f2e8;
-
-    border: none;
-
-    border-radius: 5px;
-
-    padding: 12px 20px;
-
-    font-family: inherit;
-
-    font-size: 1rem;
-
-    cursor: pointer;
-}
-
-
-/* Button hover and keyboard focus effects */
-
-button:hover,
-button:focus-visible {
-    background-color: #6b513b;
-}
-
-
-/* ==========================================================
-   SECTION 13: HATCH GUIDE TABLE
-   ========================================================== */
-
-/*
-   The table-scroll container allows the hatch
-   reference table to scroll horizontally on
-   smaller screens.
-*/
+/* ========================================= */
+/* HATCH GUIDE TABLE                         */
+/* ========================================= */
 
 .table-scroll {
     width: 100%;
-
     overflow-x: auto;
 
-    margin-top: 20px;
+    margin-top: 22px;
+    margin-bottom: 25px;
 }
-
-
-/* Main table appearance */
 
 table {
     width: 100%;
 
     border-collapse: collapse;
 
-    text-align: left;
+    background-color: #ffffff;
+
+    font-size: 0.98rem;
 }
-
-
-/* Table headers and cells */
 
 th,
 td {
-    padding: 12px;
+    padding: 14px 16px;
 
-    border: 1px solid #b89b72;
-}
-
-
-/* Table header row */
-
-th {
-    background-color: #1f3d2b;
-
-    color: #ffffff;
-}
-
-
-/* Alternating table row backgrounds */
-
-tbody tr:nth-child(even) {
-    background-color: #eee7d9;
-}
-
-
-/* ==========================================================
-   SECTION 14: CONTACT FORM
-   ========================================================== */
-
-/*
-   Centers the Contact page form while keeping
-   its labels and input fields left-aligned.
-*/
-
-#contact-form {
-    width: min(100%, 600px);
-
-    margin: 24px auto;
+    border: 1px solid #c7d2c4;
 
     text-align: left;
+    vertical-align: top;
 }
 
-
-/* Contact form labels */
-
-#contact-form label {
-    display: block;
-
-    margin-top: 16px;
-    margin-bottom: 5px;
-
-    color: #6b513b;
+th {
+    background-color: #294b38;
+    color: #ffffff;
 
     font-weight: bold;
 }
 
+tbody tr:nth-child(even) {
+    background-color: #eef3eb;
+}
 
-/* Contact form input fields */
+tbody tr:hover {
+    background-color: #e1eadd;
+}
 
-#contact-form input,
-#contact-form textarea {
+
+/* ========================================= */
+/* JQUERY FISHING TIPS                       */
+/* ========================================= */
+
+#fishing-tips-section {
+    padding: 25px;
+
+    background-color: #eaf0e6;
+
+    border: 1px solid #c8d7c4;
+    border-radius: 9px;
+}
+
+#tips-button {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    background-color: #294b38;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+#tips-button:hover {
+    background-color: #3d684e;
+}
+
+#fishing-tips {
+    margin-top: 22px;
+    padding: 22px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #cfdbcb;
+    border-radius: 7px;
+}
+
+#fishing-tips h3 {
+    margin-bottom: 14px;
+}
+
+#fishing-tips ul {
+    margin-bottom: 0;
+}
+
+
+/* ========================================= */
+/* CONTACT FORM                              */
+/* ========================================= */
+
+.contact-section {
+    max-width: 750px;
+
+    padding: 28px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d5ddd0;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+    color: #294b38;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
     display: block;
 
     width: 100%;
 
-    padding: 10px;
-
-    background-color: #ffffff;
-
-    border: 1px solid #b89b72;
-
-    border-radius: 4px;
+    padding: 12px 14px;
 
     font-family: inherit;
-
     font-size: 1rem;
+
+    color: #26372d;
+    background-color: #ffffff;
+
+    border: 1px solid #aebdab;
+    border-radius: 6px;
 }
 
-
-/* Adds spacing above the form button */
-
-#contact-form button {
-    margin-top: 20px;
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
 }
 
+.submit-button {
+    display: inline-block;
 
-/* Form confirmation message */
+    padding: 13px 24px;
 
-#form-response {
-    color: #1f3d2b;
+    background-color: #294b38;
+    color: #ffffff;
 
+    font-family: inherit;
+    font-size: 1rem;
     font-weight: bold;
 
-    text-align: center;
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
 }
 
+.submit-button:hover {
+    background-color: #3d684e;
+}
 
-/* Current date and time display */
-
-#date-time {
-    margin-top: 20px;
-
-    color: #6b513b;
+#form-feedback {
+    margin-top: 18px;
 
     font-weight: bold;
 }
 
+.form-note {
+    margin-top: 22px;
 
-/* ==========================================================
-   SECTION 15: WEBSITE FOOTER
-   ========================================================== */
+    font-size: 0.9rem;
+    font-style: italic;
 
-/*
-   The same footer appears on all five pages.
-*/
+    color: #59675b;
+}
+
+
+/* ========================================= */
+/* CURRENT DATE AND TIME                     */
+/* ========================================= */
+
+.date-time-section {
+    padding: 22px;
+
+    background-color: #eaf0e6;
+
+    border: 1px solid #c8d7c4;
+    border-radius: 9px;
+}
+
+#current-date-time {
+    margin-bottom: 0;
+
+    font-weight: bold;
+    color: #294b38;
+}
+
+
+/* ========================================= */
+/* WEBSITE FOOTER                            */
+/* ========================================= */
 
 .site-footer {
-    padding: 18px;
+    padding: 24px 20px;
 
-    background-color: #f6f2e8;
+    background-color: #294b38;
 
-    border-top: 1px solid #d8cbb9;
-
+    color: #ffffff;
     text-align: center;
 }
-
-
-/* Footer paragraph */
 
 .site-footer p {
     margin: 0;
 
-    font-size: 0.9rem;
+    font-size: 0.92rem;
 }
 
 
-/* ==========================================================
-   SECTION 16: TABLET RESPONSIVE DESIGN
-   ========================================================== */
+/* ========================================= */
+/* TABLET RESPONSIVE DESIGN                  */
+/* ========================================= */
 
-/*
-   This media query applies to screens
-   900 pixels wide or smaller.
-*/
+@media (max-width: 850px) {
 
-@media screen and (max-width: 900px) {
-
-    /* Allows page content to use more screen width */
-
-    .content-wrap {
-        width: 92%;
+    #site-title {
+        font-size: 2.3rem;
     }
-
-
-    /* Changes cards from three columns to two */
 
     .card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
-
-    /* Reduces navigation link spacing */
-
-    .site-nav a {
-        padding: 12px;
+    .insect-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
-
-    /* Slightly reduces image height */
-
-    .insect-grid .info-card img {
-        height: 220px;
+    .content-wrap {
+        width: min(100% - 32px, 1050px);
     }
 
 }
 
 
-/* ==========================================================
-   SECTION 17: MOBILE RESPONSIVE DESIGN
-   ========================================================== */
+/* ========================================= */
+/* MOBILE RESPONSIVE DESIGN                  */
+/* ========================================= */
 
-/*
-   This media query applies to screens
-   600 pixels wide or smaller.
+@media (max-width: 600px) {
 
-   It adjusts the website for smartphones.
-*/
-
-@media screen and (max-width: 600px) {
-
-    /* Allows content to use most of the screen */
-
-    .content-wrap {
-        width: 94%;
-
-        padding-top: 24px;
-        padding-bottom: 35px;
+    body {
+        font-size: 16px;
     }
 
+    #site-title {
+        font-size: 1.9rem;
+    }
 
-    /* Stacks navigation links vertically */
+    .site-header {
+        padding: 28px 16px 24px;
+    }
 
-    .site-nav a {
-        display: block;
+    .site-header p {
+        font-size: 0.95rem;
+    }
 
+    .site-nav {
+        gap: 4px;
         padding: 10px;
     }
 
+    .site-nav a {
+        padding: 9px 12px;
+        font-size: 0.9rem;
+    }
 
-    /* Displays all cards in a single column */
+    .content-wrap {
+        width: min(100% - 28px, 1050px);
+
+        padding-top: 28px;
+        padding-bottom: 38px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-panel {
+        padding: 20px;
+    }
 
     .card-grid,
     .insect-grid {
         grid-template-columns: 1fr;
     }
 
-
-    /* Reduces homepage introduction padding */
-
-    .intro-panel {
-        padding: 16px;
+    .info-card {
+        padding: 18px;
     }
-
-
-    /* Allows insect photographs to resize naturally */
 
     .insect-grid .info-card img {
-        height: auto;
+        height: 210px;
     }
 
-
-    /* Ensures videos fit on narrow screens */
-
-    .video-portrait,
-    .video-landscape {
-        max-width: 100%;
+    .contact-section {
+        padding: 20px;
     }
-
-
-    /* Reduces table cell padding */
-
-    th,
-    td {
-        padding: 8px;
-    }
-
-
-    /* Reduces fishing tips container padding */
 
     #fishing-tips-section {
-        padding: 15px;
+        padding: 18px;
     }
 
+    #fishing-tips {
+        padding: 18px;
+    }
 
-    /* Ensures the contact form fits the screen */
+    .video-portrait {
+        width: 100%;
+        max-width: 360px;
+    }
 
-    #contact-form {
+    .video-landscape {
         width: 100%;
     }
 
-} /* Test comment */
+    th,
+    td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* ========================================= */
+/* REDUCED MOTION ACCESSIBILITY             */
+/* ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .site-nav a,
+    #tips-button,
+    .submit-button {
+        transition: none;
+    }
+
+}

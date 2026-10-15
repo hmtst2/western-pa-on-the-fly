@@ -13,7 +13,7 @@
 
     <!-- Website description -->
     <meta name="description"
-          content="Contact Western PA on the Fly and share your fly fishing experiences.">
+          content="Contact Western PA on the Fly to share fly fishing experiences, ask questions, or discuss trout fishing in Pennsylvania.">
 
     <!-- Browser tab title -->
     <title>Contact | Western PA on the Fly</title>
@@ -65,169 +65,251 @@
 
     <main class="content-wrap">
 
+
         <!-- ========================================= -->
         <!-- CONTACT PAGE INTRODUCTION                -->
         <!-- ========================================= -->
 
         <section>
 
-            <h2>Contact Western PA on the Fly</h2>
+            <h2>Contact Me</h2>
 
             <p>
                 Have a question about fly fishing,
-                a fishing experience to share,
-                or a suggestion for the website?
+                a favorite Pennsylvania trout stream,
+                or an experience you'd like to share?
             </p>
 
             <p>
-                Use the demonstration contact form below
-                to enter your information and message.
+                Use the contact form below to enter
+                your information and message.
             </p>
 
             <p>
-                <strong>
-                    Please note: This form is for demonstration
-                    purposes and does not send messages.
-                </strong>
+                Whether you're interested in fly patterns,
+                aquatic insects, or exploring new streams,
+                I always enjoy hearing about other
+                anglers' experiences.
             </p>
 
         </section>
 
 
         <!-- ========================================= -->
-        <!-- JAVASCRIPT DATE AND TIME DISPLAY          -->
+        <!-- CONTACT FORM                             -->
         <!-- ========================================= -->
 
-        <!--
-            JavaScript will insert the current date
-            and time into this paragraph.
-        -->
+        <section class="contact-section">
 
-        <p id="date-time"></p>
+            <h2>Send a Message</h2>
+
+            <!--
+                This form demonstrates HTML form elements
+                and JavaScript client-side validation.
+
+                It does not send information to a server
+                or email address.
+            -->
+
+            <form id="contact-form" novalidate>
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="full-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL ADDRESS -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MESSAGE SUBJECT -->
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                        required
+                    >
+
+                        <option value="">
+                            Select a subject
+                        </option>
+
+                        <option value="Fly Fishing Question">
+                            Fly Fishing Question
+                        </option>
+
+                        <option value="Fly Patterns">
+                            Fly Patterns
+                        </option>
+
+                        <option value="Aquatic Insects">
+                            Aquatic Insects
+                        </option>
+
+                        <option value="Pennsylvania Trout Streams">
+                            Pennsylvania Trout Streams
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Type your message here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT BUTTON -->
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    Submit Message
+                </button>
+
+
+                <!--
+                    JavaScript updates this paragraph
+                    with validation errors or a
+                    successful demonstration message.
+
+                    aria-live announces changes to
+                    assistive technology.
+                -->
+
+                <p
+                    id="form-feedback"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+            <p class="form-note">
+                Note: This form is a demonstration for
+                a student web design project. Submitting
+                the form validates your information but
+                does not send an actual message.
+            </p>
+
+        </section>
 
 
         <!-- ========================================= -->
-        <!-- CONTACT FORM                              -->
+        <!-- ADDITIONAL CONTACT INFORMATION           -->
         <!-- ========================================= -->
 
-        <!--
-            The form uses HTML5 validation.
+        <section>
 
-            The required attribute prevents submission
-            when mandatory fields are left empty.
+            <h2>Connect Through Fly Fishing</h2>
 
-            JavaScript prevents actual submission and
-            displays a confirmation message.
-        -->
+            <p>
+                Fly fishing is a great way to connect
+                with other anglers, learn new techniques,
+                and share experiences on the water.
+            </p>
 
-        <form id="contact-form">
+            <p>
+                For additional information about
+                Pennsylvania fishing opportunities,
+                licensing, and regulations, visit the
+                official Pennsylvania Fish and Boat
+                Commission website.
+            </p>
 
+            <p>
 
-            <!-- ========================================= -->
-            <!-- NAME FIELD                                -->
-            <!-- ========================================= -->
+                <a
+                    href="https://www.pa.gov/agencies/fishandboat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Pennsylvania Fish and Boat Commission
+                </a>
 
-            <label for="name">Name</label>
+            </p>
 
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                autocomplete="name"
-                required
-            >
-
-
-            <!-- ========================================= -->
-            <!-- EMAIL FIELD                               -->
-            <!-- ========================================= -->
-
-            <label for="email">Email Address</label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email address"
-                autocomplete="email"
-                required
-            >
-
-
-            <!-- ========================================= -->
-            <!-- SUBJECT FIELD                             -->
-            <!-- ========================================= -->
-
-            <label for="subject">Subject</label>
-
-            <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Enter a subject"
-                required
-            >
-
-
-            <!-- ========================================= -->
-            <!-- MESSAGE FIELD                             -->
-            <!-- ========================================= -->
-
-            <label for="message">Message</label>
-
-            <textarea
-                id="message"
-                name="message"
-                rows="6"
-                placeholder="Enter your message"
-                required
-            ></textarea>
-
-
-            <!-- ========================================= -->
-            <!-- OPTIONAL FISHING TRIP DATE                -->
-            <!-- ========================================= -->
-
-            <label for="fishing-date">
-                Date of Fishing Trip (Optional)
-            </label>
-
-            <input
-                type="date"
-                id="fishing-date"
-                name="fishing-date"
-            >
-
-
-            <!-- ========================================= -->
-            <!-- SUBMIT BUTTON                             -->
-            <!-- ========================================= -->
-
-            <button type="submit">
-                Check Form
-            </button>
-
-        </form>
+        </section>
 
 
         <!-- ========================================= -->
-        <!-- JAVASCRIPT FORM RESPONSE                  -->
+        <!-- JAVASCRIPT DATE AND TIME DISPLAY         -->
         <!-- ========================================= -->
 
-        <!--
-            JavaScript will display a confirmation
-            message inside this paragraph.
+        <section class="date-time-section">
 
-            aria-live allows screen readers to
-            announce the message when it appears.
-        -->
+            <h2>Current Date and Time</h2>
 
-        <p
-            id="form-response"
-            role="status"
-            aria-live="polite"
-        ></p>
+            <p>
+                The current date and time according
+                to your device is:
+            </p>
+
+            <!-- JavaScript inserts the date and time here -->
+
+            <p id="current-date-time" aria-live="off">
+                Loading current date and time...
+            </p>
+
+        </section>
 
     </main>
 
@@ -246,52 +328,144 @@
 
 
     <!-- ========================================= -->
-    <!-- JAVASCRIPT                                 -->
+    <!-- JAVASCRIPT                                -->
     <!-- ========================================= -->
 
     <script>
 
         // =========================================
-        // DISPLAY CURRENT DATE AND TIME
+        // CURRENT DATE AND TIME
         // =========================================
 
-        // Create a Date object using the visitor's
-        // current local date and time.
-        const currentDate = new Date();
+        // Find the paragraph where the date and
+        // time will be displayed.
+        const dateTimeDisplay =
+            document.getElementById("current-date-time");
 
-        // Find the paragraph with the ID "date-time"
-        // and display the formatted date and time.
-        document.getElementById("date-time").textContent =
-            "Current Date and Time: " +
-            currentDate.toLocaleString();
+
+        // Function to update the date and time.
+        function updateDateTime() {
+
+            // Create a new Date object.
+            const now = new Date();
+
+            // Format the date and time according
+            // to the visitor's device settings.
+            const formattedDateTime =
+                now.toLocaleString();
+
+            // Display the formatted date and time.
+            dateTimeDisplay.textContent =
+                formattedDateTime;
+
+        }
+
+
+        // Display the date and time immediately.
+        updateDateTime();
+
+
+        // Update the display every second.
+        setInterval(updateDateTime, 1000);
+
 
 
         // =========================================
-        // CONTACT FORM VALIDATION AND CONFIRMATION
+        // CONTACT FORM VALIDATION
         // =========================================
 
-        // Find the contact form and listen for
-        // the submit event.
-        document.getElementById("contact-form")
-            .addEventListener("submit", function(event) {
+        // Select the contact form.
+        const contactForm =
+            document.getElementById("contact-form");
 
-                // Prevent the form from submitting
-                // or refreshing the webpage.
-                event.preventDefault();
 
-                // HTML5 validation runs before this
-                // event handler when required fields
-                // are missing or an email is invalid.
+        // Select the feedback paragraph.
+        const formFeedback =
+            document.getElementById("form-feedback");
 
-                // Display a confirmation message
-                // after the form passes validation.
-                document.getElementById("form-response").textContent =
-                    "Form validation successful! " +
-                    "Thank you for completing the form. " +
-                    "This is a demonstration form, " +
-                    "so your message has not been sent.";
 
-            });
+        // Listen for the form submission event.
+        contactForm.addEventListener("submit", function (event) {
+
+            // Prevent the browser from reloading
+            // the page or attempting to submit
+            // the form to a server.
+            event.preventDefault();
+
+
+            // Retrieve form values.
+            const fullName =
+                document.getElementById("full-name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const subject =
+                document.getElementById("subject").value;
+
+            const message =
+                document.getElementById("message").value.trim();
+
+
+            // =========================================
+            // CHECK FOR EMPTY FIELDS
+            // =========================================
+
+            if (
+                fullName === "" ||
+                email === "" ||
+                subject === "" ||
+                message === ""
+            ) {
+
+                formFeedback.textContent =
+                    "Please complete all fields before submitting.";
+
+                formFeedback.style.color = "#a32929";
+
+                return;
+
+            }
+
+
+            // =========================================
+            // VALIDATE EMAIL ADDRESS
+            // =========================================
+
+            // Basic email format validation.
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if (!emailPattern.test(email)) {
+
+                formFeedback.textContent =
+                    "Please enter a valid email address.";
+
+                formFeedback.style.color = "#a32929";
+
+                return;
+
+            }
+
+
+            // =========================================
+            // SUCCESSFUL VALIDATION
+            // =========================================
+
+            // The form is valid, but no message
+            // is actually transmitted.
+            formFeedback.textContent =
+                "Your form was validated successfully! " +
+                "This is a demonstration form, so no message was sent.";
+
+            formFeedback.style.color = "#216b37";
+
+
+            // Clear the form after successful validation.
+            contactForm.reset();
+
+        });
 
     </script>
 
